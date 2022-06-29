@@ -1,0 +1,12 @@
+<launch>
+    <machine
+        name="jetson"
+        address="jetson"
+        env-loader="/opt/ros/melodic/env_jetson.sh"
+        default="true"
+        user="jetson"
+    />
+    <include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch">
+        <arg name="machine" value="jetson"/>
+    </include>
+</launch>
