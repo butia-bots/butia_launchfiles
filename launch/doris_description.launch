@@ -1,0 +1,13 @@
+<launch>
+    <arg name="use_arm" default="true"/>
+
+    <arg name="urdf" default="doris_no_arm.urdf.xacro"/>
+
+    <group if="$(arg use_arm)">
+        <arg name="urdf" default="doris.urdf.xacro" />
+    </group>
+
+    <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf)"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
+</launch>
