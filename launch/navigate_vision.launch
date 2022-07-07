@@ -1,9 +1,16 @@
 <launch>
+    <arg name="output" default="screen"/>
+    <arg name="navigate_output" default="$(arg output)"/>
+    <arg name="vision_output" default="$(arg output)"/>
+
     <include file="$(find butia_launchfiles)/launch/doris_description.launch">
         <arg name="use_arm" value="false"/>
+        <arg name="output" value="$(arg output)"/>
     </include>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch"/>
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+        <arg name="output" value="$(arg navigate_output)"/>
+    </include>
     
     <machine
         name="jetson"
@@ -14,7 +21,8 @@
     />
     <include file="$(find butia_vision_bridge)/launch/butia_vision_bridge.launch">
         <arg name="machine" value="jetson"/>
+        <arg name="output" value="$(arg vision_output)"/>
     </include>
 
-        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz"/ output="$(arg output)">
 </launch>
