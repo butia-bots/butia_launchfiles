@@ -25,10 +25,11 @@
     </include>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
-        <arg name="robot_model" value="doris_arm"/>
-        <arg name="robot_name" value=""/>
-        <arg name="use_actual" value="true"/>
+        <arg name="robot_model"     value="doris_arm"/>
+        <arg name="use_actual"      value="true"/>
         <arg name="use_moveit_rviz" value="false"/>
+        <arg name="use_joint_pub"   value="false"/>
+        <arg name="use_state_pub"   value="false"/>
     </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
