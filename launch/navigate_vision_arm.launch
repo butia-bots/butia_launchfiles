@@ -6,7 +6,6 @@
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch">
         <arg name="use_arm" value="true"/>
-        <arg name="output" value="$(arg output)"/>
     </include>
 
     <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
@@ -27,9 +26,10 @@
 
     <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
         <arg name="robot_model" value="doris_arm"/>
+        <arg name="robot_name" value=""/>
         <arg name="use_actual" value="true"/>
-        <arg name="output" value="$(arg arm_output)"/>
+        <arg name="use_moveit_rviz" value="false"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz"/ output="$(arg output)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
 </launch>

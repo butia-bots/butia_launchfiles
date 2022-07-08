@@ -5,7 +5,6 @@
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch">
         <arg name="use_arm" value="false"/>
-        <arg name="output" value="$(arg output)"/>
     </include>
 
     <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
@@ -24,5 +23,5 @@
         <arg name="output" value="$(arg vision_output)"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz"/ output="$(arg output)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
 </launch>
