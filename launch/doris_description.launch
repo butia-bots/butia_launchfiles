@@ -1,8 +1,5 @@
 <launch>
-    <arg name="use_arm" default="true"/>
-
-    <arg name="urdf" default="doris_no_arm.urdf.xacro" unless="$(arg use_arm)"/>
-    <arg name="urdf" value="doris.urdf.xacro" if="$(arg use_arm)" />
+    <arg name="urdf" default="doris_no_arm.urdf.xacro"/>
 
     <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf)"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>

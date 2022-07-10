@@ -1,6 +1,6 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
@@ -16,7 +16,7 @@ Panels:
         - /MotionPlanning1/Planning Metrics1
         - /MotionPlanning1/Planned Path1
       Splitter Ratio: 0.5625
-    Tree Height: 449
+    Tree Height: 140
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -35,7 +35,7 @@ Panels:
     Experimental: true
     Name: Time
     SyncMode: 2
-    SyncSource: ""
+    SyncSource: LaserScan
   - Class: rviz/Tool Properties
     Expanded: ~
     Name: Tool Properties
@@ -75,6 +75,206 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/ee_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/ee_gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/fingers_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/gripper_bar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/gripper_prop_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/left_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/right_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/wrist_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dorso_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        frontal_caster_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_root:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hokuyo_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        jaw_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        kinect2_depth_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        kinect2_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        kinect2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        kinect2_rgb_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        kinect2_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        left_eye_horizontal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        left_eye_vertical_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_inferior_eyelid_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_rotacional_eyebrow_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_superior_eyelid_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_vertical_eyebrow_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        left_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        neck_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_caster_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_eye_horizontal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        right_eye_vertical_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_inferior_eyelid_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_rotacional_eyebrow_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_superior_eyelid_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_vertical_eyebrow_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        right_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sick_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -86,6 +286,96 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        doris_arm/base_link:
+          Value: true
+        doris_arm/ee_arm_link:
+          Value: true
+        doris_arm/ee_gripper_link:
+          Value: true
+        doris_arm/fingers_link:
+          Value: true
+        doris_arm/forearm_link:
+          Value: true
+        doris_arm/gripper_bar_link:
+          Value: true
+        doris_arm/gripper_link:
+          Value: true
+        doris_arm/gripper_prop_link:
+          Value: true
+        doris_arm/left_finger_link:
+          Value: true
+        doris_arm/right_finger_link:
+          Value: true
+        doris_arm/shoulder_link:
+          Value: true
+        doris_arm/upper_arm_link:
+          Value: true
+        doris_arm/wrist_link:
+          Value: true
+        dorso_link:
+          Value: true
+        frontal_caster_link:
+          Value: true
+        head_link:
+          Value: true
+        head_root:
+          Value: true
+        hokuyo_link:
+          Value: true
+        jaw_link:
+          Value: true
+        kinect2_depth_frame:
+          Value: true
+        kinect2_depth_optical_frame:
+          Value: true
+        kinect2_link:
+          Value: true
+        kinect2_rgb_frame:
+          Value: true
+        kinect2_rgb_optical_frame:
+          Value: true
+        left_eye_horizontal_link:
+          Value: true
+        left_eye_vertical_link:
+          Value: true
+        left_inferior_eyelid_link:
+          Value: true
+        left_rotacional_eyebrow_link:
+          Value: true
+        left_superior_eyelid_link:
+          Value: true
+        left_vertical_eyebrow_link:
+          Value: true
+        left_wheel_link:
+          Value: true
+        map:
+          Value: true
+        neck_link:
+          Value: true
+        odom:
+          Value: true
+        rear_caster_link:
+          Value: true
+        right_eye_horizontal_link:
+          Value: true
+        right_eye_vertical_link:
+          Value: true
+        right_inferior_eyelid_link:
+          Value: true
+        right_rotacional_eyebrow_link:
+          Value: true
+        right_superior_eyelid_link:
+          Value: true
+        right_vertical_eyebrow_link:
+          Value: true
+        right_wheel_link:
+          Value: true
+        sick_link:
+          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -93,7 +383,72 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        map:
+          odom:
+            base_footprint:
+              base_link:
+                dorso_link:
+                  doris_arm/base_link:
+                    doris_arm/shoulder_link:
+                      doris_arm/upper_arm_link:
+                        doris_arm/forearm_link:
+                          doris_arm/wrist_link:
+                            doris_arm/gripper_link:
+                              doris_arm/ee_arm_link:
+                                doris_arm/gripper_bar_link:
+                                  doris_arm/fingers_link:
+                                    doris_arm/ee_gripper_link:
+                                      {}
+                                    doris_arm/left_finger_link:
+                                      {}
+                                    doris_arm/right_finger_link:
+                                      {}
+                                doris_arm/gripper_prop_link:
+                                  {}
+                  head_root:
+                    neck_link:
+                      head_link:
+                        jaw_link:
+                          {}
+                        left_eye_horizontal_link:
+                          left_eye_vertical_link:
+                            {}
+                        left_inferior_eyelid_link:
+                          {}
+                        left_superior_eyelid_link:
+                          {}
+                        left_vertical_eyebrow_link:
+                          left_rotacional_eyebrow_link:
+                            {}
+                        right_eye_horizontal_link:
+                          right_eye_vertical_link:
+                            {}
+                        right_inferior_eyelid_link:
+                          {}
+                        right_superior_eyelid_link:
+                          {}
+                        right_vertical_eyebrow_link:
+                          right_rotacional_eyebrow_link:
+                            {}
+                  kinect2_link:
+                    kinect2_depth_frame:
+                      kinect2_depth_optical_frame:
+                        {}
+                    kinect2_rgb_frame:
+                      kinect2_rgb_optical_frame:
+                        {}
+                  sick_link:
+                    {}
+                frontal_caster_link:
+                  {}
+                hokuyo_link:
+                  {}
+                left_wheel_link:
+                  {}
+                rear_caster_link:
+                  {}
+                right_wheel_link:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 0.699999988079071
@@ -260,10 +615,10 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
-    - Acceleration_Scaling_Factor: 0.1
+    - Acceleration_Scaling_Factor: 1
       Class: moveit_rviz_plugin/MotionPlanning
       Enabled: true
-      Move Group Namespace: ""
+      Move Group Namespace: doris_arm
       MoveIt_Allow_Approximate_IK: false
       MoveIt_Allow_External_Program: false
       MoveIt_Allow_Replanning: false
@@ -290,7 +645,67 @@ Visualization Manager:
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
-          Link Tree Style: ""
+          Link Tree Style: Links in Alphabetic Order
+          doris_arm/base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/ee_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/ee_gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/fingers_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/gripper_bar_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/gripper_prop_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/left_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/right_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/wrist_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
         Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
@@ -321,7 +736,7 @@ Visualization Manager:
         Start State Alpha: 1
         Start State Color: 0; 255; 0
       Planning Scene Topic: move_group/move_group/monitored_planning_scene
-      Robot Description: robot_description
+      Robot Description: doris_arm/robot_description
       Scene Geometry:
         Scene Alpha: 1
         Scene Color: 50; 230; 50
@@ -336,12 +751,72 @@ Visualization Manager:
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
-          Link Tree Style: ""
+          Link Tree Style: Links in Alphabetic Order
+          doris_arm/base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/ee_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/ee_gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/fingers_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/gripper_bar_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/gripper_prop_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          doris_arm/left_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/right_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          doris_arm/wrist_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
         Robot Alpha: 1
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
-      Velocity_Scaling_Factor: 0.1
+      Velocity_Scaling_Factor: 1
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -370,7 +845,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.629117965698242
+      Distance: 2.2343642711639404
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -378,17 +853,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.09983809292316437
-        Y: -0.6780056953430176
-        Z: 1.154238224029541
+        X: 0.4776311218738556
+        Y: -0.026607513427734375
+        Z: 0.9358011484146118
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6965833306312561
+      Pitch: 0.12158366292715073
       Target Frame: base_footprint
-      Yaw: 1.9916657209396362
+      Yaw: 1.1916674375534058
     Saved:
       - Class: rviz/Orbit
         Distance: 8.172611236572266
@@ -413,14 +888,14 @@ Visualization Manager:
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 741
+  Height: 752
   Hide Left Dock: false
   Hide Right Dock: false
   MotionPlanning:
     collapsed: false
-  MotionPlanning - Slider:
+  MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001f30000024cfc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001b500000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000024c000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000200000000860000005c00fffffffb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067000000010c0000017d0000017d00ffffff000000010000010f0000014afc0200000002fb0000000a00560069006500770073000000003d0000014a000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004f300000039fc0100000002fb0000000800540069006d00650100000000000004f30000031b00fffffffb0000000800540069006d00650100000000000004500000000000000000000002fa0000024c00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001f300000257fc020000000cfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001b500000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000000c9000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000200000000860000005c00fffffffb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000010c000001880000017d00fffffffb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016000000010000010f0000014afc0200000002fb0000000a00560069006500770073000000003d0000014a000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004f300000039fc0100000002fb0000000800540069006d00650100000000000004f30000031b00fffffffb0000000800540069006d00650100000000000004500000000000000000000002fa0000025700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -430,5 +905,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1267
-  X: 72
+  X: 0
   Y: 27

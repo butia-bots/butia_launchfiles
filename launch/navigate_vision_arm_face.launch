@@ -3,16 +3,20 @@
     <arg name="navigate_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
+    <arg name="face_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
 
-    <include file="$(find butia_launchfiles)/launch/navigate_vision.launch">
+    <include file="$(find butia_launchfiles)/launch/navigate_vision_arm.launch">
         <arg name="output" value="$(arg output)"/>
         <arg name="navigate_output" value="$(arg navigate_output)"/>
         <arg name="vision_output" value="$(arg vision_output)"/>
+        <arg name="arm_output" value="$(arg arm_output)"/>
         <arg name="use_rviz" value="false"/>
     </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <include file="$(find robotFace)/launch/face.launch">
+        <arg name="output" value="$(arg face_output)"/>
+    </include>
 
     <group if="$(arg use_rviz)">
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
