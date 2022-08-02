@@ -19,8 +19,8 @@
     <include file="$(find butia_vision_launchfiles)/object_recognition.launch">
         <arg name="machine" value="jetson"/>
         <arg name="i2k_machine" value="localhost"/>
-        <arg name="or_config_file" value="object_recognition-sim.yaml"/>
+        <arg name="or_config_file" value="object_recognition.yaml"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz"/ output="$(arg output)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
 </launch>
