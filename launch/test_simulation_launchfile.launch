@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find butia_launchfiles)/launch/doris_description.launch">
+    </include>
+    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch">
+    </include>
+</launch>
