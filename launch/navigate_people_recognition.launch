@@ -1,21 +1,14 @@
 <launch>
     <arg name="output" default="screen"/>
-    <arg name="slam_output" default="$(arg output)"/>
+    <arg name="navigate_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
-    <arg name="arm_output" default="$(arg output)"/>
-    <arg name="use_rviz" default="true"/>
-    <arg name="unkonw_map" default="$(arg unkonw_map)"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
-    <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
-        <arg name="unkonw_map" value="$(arg unkonw_map)"/>
-        <!-- <arg name="output" value="$(arg slam_output)"/>
-    </include> -->
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+        <arg name="output" value="$(arg navigate_output)"/>
     </include>
-
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
@@ -28,7 +21,7 @@
         default="false"
         user="jetson"
     />
-    <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
+    <include file="$(find butia_vision_launchfiles)/people_detection.launch">
         <arg name="machine" value="jetson"/>
     </include>
 
