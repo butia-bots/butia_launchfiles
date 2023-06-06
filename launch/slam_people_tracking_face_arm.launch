@@ -5,16 +5,9 @@
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="unkonw_map" default="$(arg unkonw_map)"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
-
-    <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
-        <arg name="unkonw_map" value="$(arg unkonw_map)"/>
-        <!-- <arg name="output" value="$(arg slam_output)"/>
-    </include> -->
-    </include>
-
+    <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch"/>
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
 
     <include file="$(find robotFace)/launch/face.launch">
