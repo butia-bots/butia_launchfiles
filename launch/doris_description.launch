@@ -3,7 +3,16 @@
     <arg name="robot_model" default="doris_arm"/>
 
     <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true"/>
+    <param name="doris_arm/robot_description" command="xacro $(find doris_arm_description)/urdf/doris_arm.urdf.xacro load_gazebo_configs:=true"/>
+    
+    <!-- Kinect Joint Controller -->
+    <rosparam file = "$find(butia_description)/doris_sensors_description/config/config.yaml" command = "load"/>
+    <node name = "controller_spawner" pkg = "controller_manager" type = "spawner" ns = "/simple_model" args = "joint_state_controller kinect_joint_controller --shutdown-timeout 3"/>
+    
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+        <remap from = "joint_states" to = "/simple_model/joint_states"/>
+    </node>
+    
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
     <param name="robot_description_semantic"
     command="xacro $(find interbotix_xsarm_moveit)/config/srdf/$(arg robot_model).srdf.xacro
