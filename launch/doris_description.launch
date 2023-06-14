@@ -3,26 +3,10 @@
     <arg name="robot_model" default="doris_arm"/>
 
     <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true"/>
-    <param name="doris_arm/robot_description" command="xacro $(find doris_arm_description)/urdf/doris_arm.urdf.xacro load_gazebo_configs:=true"/>
-    
-    <!-- Kinect Joint Controller -->
-    <rosparam file="$(find doris_sensors_description)/config/config.yaml" command = "load"/>
-    <node name = "controller_spawner" pkg = "controller_manager" type = "spawner" ns = "/simple_model" args = "joint_state_controller kinect_joint_controller"/>
-    <node
-        name = "xs_sdk_kinect"
-        pkg = "interbotix_xs_sdk"
-        type = "xs_sdk"
-        output = "screen"
-        ns = "/simple_model">
-        <param name="motor_configs"                   value="true"/>
-        <param name="mode_configs"                    value="true"/>
-        <param name="load_configs"                    value="true"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
+        <rosparam param="source_list">["doris_head/joint_states"]</rosparam>
     </node>
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
-        <remap from = "joint_states" to = "/simple_model/joint_states"/>
-    </node>
-    
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
     <param name="robot_description_semantic"
     command="xacro $(find interbotix_xsarm_moveit)/config/srdf/$(arg robot_model).srdf.xacro
         robot_name:=doris_arm
