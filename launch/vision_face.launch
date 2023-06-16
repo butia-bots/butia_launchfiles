@@ -3,6 +3,7 @@
     <!-- <arg name="navigate_output" default="$(arg output)"/> -->
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
+    <arg name="camera" default="kinect"/>
 
     <!-- <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
@@ -18,6 +19,7 @@
         user="jetson"
     /> -->
     <include file="$(find butia_vision_launchfiles)/face_rec.launch">
+    <arg name="camera" value="$(arg camera)"/>
     </include>
     <include file="$(find butia_speech)/launch/speech_to_text.launch" />
     <include file="$(find butia_speech)/launch/synthesizer_speech.launch" />

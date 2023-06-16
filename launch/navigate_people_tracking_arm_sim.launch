@@ -5,6 +5,7 @@
     <arg name="use_rviz" default="true"/>
     <arg name="use_sim" default="false"/>
     <arg name="face_output" default="$(arg output)"/>
+    <arg name="camera" default="kinect"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
@@ -18,8 +19,7 @@
     </include>
 
     <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
-        <arg name="use_kinect" value="false" />
-        <arg name="use_bridge" value="false" />
+        <arg name="camera" value="$(arg camera)"/>
     </include>
 
     <group if="$(arg use_rviz)">

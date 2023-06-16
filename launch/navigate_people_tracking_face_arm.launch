@@ -5,6 +5,7 @@
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
+    <arg name="camera" default="kinect"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
@@ -27,6 +28,7 @@
     />
     <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
         <arg name="machine" value="jetson"/>
+        <arg name="camera" value="$(arg camera)"/>
     </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
