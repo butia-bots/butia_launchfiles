@@ -5,12 +5,27 @@
     <arg name="use_rviz" default="true"/>
     <arg name="use_sim" default="false"/>
     <arg name="face_output" default="$(arg output)"/>
+    <arg name="x" default="0.0"/>
+    <arg name="y" default="0.0"/>
+    <arg name="z" default="1.0"/>
+    <arg name="yaw" default="0.0"/>
+    <arg name="map" default="$(find butia_navigation_gazebo)/maps/cafe.yaml" />
+    <arg name="world_name" default="worlds/cafe.world"/>
+
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch" />
+    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch">
+        <arg name="x" value="$(arg x)"/>
+        <arg name="y" value="$(arg y)"/>
+        <arg name="z" value="$(arg z)"/>
+        <arg name="world_name" value="$(arg world_name)"/>
+        <arg name="yaw" value="$(arg yaw)"/>
+    </include>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch" />
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+        <arg name="map" value="$(arg map)" />
+    </include>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch">
         <arg name="use_gazebo" value="true" />
@@ -20,7 +35,8 @@
     <include file="$(find butia_vision_launchfiles)/object_recognition.launch">
         <arg name="use_kinect" value="false" />
         <arg name="use_bridge" value="false" />
-        <arg name="config_file" default="yolov5_generic.yaml"/>
+        <arg name="config_file" value="object_recognition-sim.yaml"/>
+        <arg name="recognition_network" value="owl_vit"/>
     </include>
 
     <group if="$(arg use_rviz)">
