@@ -5,6 +5,7 @@
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
+    <arg name="camera" default="kinect"/>
 
     <include file="$(find butia_launchfiles)/launch/navigate_vision_arm.launch">
         <arg name="output" value="$(arg output)"/>
@@ -12,6 +13,7 @@
         <arg name="vision_output" value="$(arg vision_output)"/>
         <arg name="arm_output" value="$(arg arm_output)"/>
         <arg name="use_rviz" value="false"/>
+        <arg name="camera" value="$(arg camera)"/>
     </include>
 
     <include file="$(find robotFace)/launch/face.launch">

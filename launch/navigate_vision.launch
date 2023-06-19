@@ -3,6 +3,7 @@
     <arg name="navigate_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
+    <arg name="camera" default="kinect"/>    
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
@@ -21,6 +22,7 @@
         <arg name="machine" value="jetson"/>
         <arg name="output" value="$(arg vision_output)"/>
         <arg name="publish_tf" value="true"/>
+        <arg name="camera" value="$(arg camera)"/>
     </include>
 
     <group if="$(arg use_rviz)">
