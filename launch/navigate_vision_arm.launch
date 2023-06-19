@@ -4,12 +4,14 @@
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
+    <arg name="camera" default="kinect"/>
 
     <include file="$(find butia_launchfiles)/launch/navigate_vision.launch">
         <arg name="output" value="$(arg output)"/>
         <arg name="navigate_output" value="$(arg navigate_output)"/>
         <arg name="vision_output" value="$(arg vision_output)"/>
         <arg name="use_rviz" value="false"/>
+        <arg name="camera" value="$(arg camera)"/>
     </include>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
