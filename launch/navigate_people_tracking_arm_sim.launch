@@ -12,8 +12,7 @@
 
     <include file="$(find butia_launchfiles)/launch/doris_simulation.launch" />
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
-    </include>
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch"/>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch">
         <arg name="use_gazebo" value="true" />
