@@ -4,6 +4,7 @@
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
     <arg name="camera" default="kinect"/>
+    <arg name="observation_sources" default="body_scan ground_scan"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 

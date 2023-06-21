@@ -9,6 +9,7 @@
     <arg name="observation_sources" default="body_scan ground_scan"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
+    
     <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
         <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
