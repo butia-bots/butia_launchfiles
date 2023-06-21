@@ -10,6 +10,7 @@
 
     <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
         <arg name="output" value="$(arg navigate_output)"/>
+        <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
 
     <include file="$(find robotFace)/launch/face.launch">
