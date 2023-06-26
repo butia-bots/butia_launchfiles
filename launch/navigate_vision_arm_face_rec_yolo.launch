@@ -27,7 +27,12 @@
         default="false"
         user="jetson"
     />
-    <include file="$(find butia_vision_launchfiles)/face_rec.launch">
+    <!-- <include file="$(find butia_vision_launchfiles)/face_rec.launch">
+        <arg name="machine" value="jetson"/>
+        <arg name="camera" value="$(arg camera)"/>
+    </include> -->
+
+    <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
         <arg name="machine" value="jetson"/>
         <arg name="camera" value="$(arg camera)"/>
     </include>
