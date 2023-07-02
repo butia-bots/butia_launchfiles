@@ -31,6 +31,13 @@
     <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
         <arg name="machine" value="jetson"/>
         <arg name="camera" value="$(arg camera)"/>
+        <remap from="/butia_vision/br/people_detection" to="/butia_vision/br/recognitions2D"/>
+    </include>
+
+    <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
+        <arg name="machine" value="jetson"/>
+        <arg name="camera" value="$(arg camera)"/>
+        <arm name= "use_image2world" value="false"/>
     </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
