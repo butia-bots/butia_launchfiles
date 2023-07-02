@@ -38,6 +38,7 @@
         <arg name="machine" value="jetson"/>
         <arg name="camera" value="$(arg camera)"/>
         <arm name= "use_image2world" value="false"/>
+        <arm name= "launch_bvb" value="false"/>
     </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
