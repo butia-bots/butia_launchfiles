@@ -8,7 +8,6 @@
     <arg name="use_rviz" default="true"/>
     <arg name="camera" default="kinect"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
-    <!-- <arg name="use_image2world" default="false"/> -->
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
     
@@ -30,18 +29,17 @@
         user="jetson"
     />
 
-    <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
+    <!-- <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
         <arg name="machine" value="jetson"/>
-        <arg name="camera" value="$(arg camera)"/>
-        <!-- <remap from="/butia_vision/br/people_detection" to="/butia_vision/br/recognitions2D"/> -->
-    </include>
-
-    <!-- <include file="$(find butia_vision_launchfiles)/yolo_tracker_object_recognition.launch">
-        <arg name="machine" value="jetson"/>
-        <arg name="camera" value="$(arg camera)"/>
-        <arm name="use_image2world" value="$(arg use_image2world)"/>
-        <arg name="launch_bvb" value="$(arg launch_bvb)"/>
+        <arg name="camera" value="None"/>
+        <remap from="/butia_vision/br/people_detection" to="/butia_vision/br/recognitions2D"/>
     </include> -->
+
+    <include file="$(find butia_vision_launchfiles)/yolo_tracker_bag_recognition.launch">
+        <arg name="machine" value="jetson"/>
+        <arg name="camera" value="$(arg camera)"/>
+        <arg name="config_file" value="yolo_tracker_bag_recognition.yaml"/>
+    </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
 </launch>
