@@ -11,7 +11,7 @@
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
     
-    <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
         <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
 
@@ -28,15 +28,10 @@
         default="false"
         user="jetson"
     />
-  
-    <include file="$(find butia_vision_launchfiles)/face_rec.launch">
-        <arg name="machine" value="jetson"/>
-        <arg name="camera" value="$(arg camera)"/>
-    </include>
 
     <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
         <arg name="machine" value="jetson"/>
-        <arg name="camera" value="None"/>
+        <arg name="camera" value="$(arg camera)"/>
         <arg name="config_file" value="$(arg tracking_config_file)"/>
     </include>
 
