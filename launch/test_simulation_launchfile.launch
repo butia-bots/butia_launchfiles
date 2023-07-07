@@ -1,6 +1,9 @@
 <launch>
+    <!-- <arg name="world_name" default="/home/igormaurell/building_editor_models/robocup2023/model.sdf"/> -->
+
     <include file="$(find butia_launchfiles)/launch/doris_description.launch">
     </include>
     <include file="$(find butia_launchfiles)/launch/doris_simulation.launch">
+        <!-- <arg name="world_name" value="$(arg world_name)"/> -->
     </include>
 </launch>

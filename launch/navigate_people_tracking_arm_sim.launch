@@ -5,14 +5,19 @@
     <arg name="use_rviz" default="true"/>
     <arg name="use_sim" default="false"/>
     <arg name="face_output" default="$(arg output)"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="n"/>
+    <arg name="world_name" default="worlds/cafe.world"/>
     
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch" />
+    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch">
+        <arg name="world_name" default="$(arg world_name)"/>
+    </include>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch"/>
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+        <arg name="use_sim" value="true"/>
+    </include>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch">
         <arg name="use_gazebo" value="true" />
@@ -24,6 +29,6 @@
     </include>
 
     <group if="$(arg use_rviz)">
-        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_people_tracking.rviz" output="$(arg output)"/>
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
     </group>
 </launch>
