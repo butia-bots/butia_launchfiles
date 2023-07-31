@@ -9,6 +9,7 @@ Panels:
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planning Metrics1
         - /MotionPlanning1/Planned Path1
+        - /MarkerArray2
       Splitter Ratio: 0.5625
     Tree Height: 323
   - Class: rviz/Selection
@@ -77,6 +78,75 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link_static:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/ee_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/ee_gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/fingers_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/gripper_bar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/gripper_prop_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/left_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/right_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/wrist_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         dorso_link:
           Alpha: 1
           Show Axes: false
@@ -92,7 +162,25 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        head_pan_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_pan_link_static:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         head_root:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        head_tilt_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_tilt_link_static:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -215,54 +303,10 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        base_footprint:
-          Value: true
-        base_link:
-          Value: true
-        doris_arm/base_link:
-          Value: true
-        doris_arm/ee_arm_link:
-          Value: true
-        doris_arm/ee_gripper_link:
-          Value: true
-        doris_arm/fingers_link:
-          Value: true
-        doris_arm/gripper_bar_link:
-          Value: true
-        doris_arm/gripper_link:
-          Value: true
-        dorso_link:
-          Value: true
-        frontal_caster_link:
-          Value: true
-        head_root:
-          Value: true
-        hokuyo_link:
-          Value: true
-        kinect2_depth_frame:
-          Value: true
-        kinect2_depth_optical_frame:
-          Value: true
-        kinect2_ir_optical_frame:
-          Value: true
-        kinect2_link:
-          Value: true
-        kinect2_rgb_frame:
-          Value: true
-        kinect2_rgb_optical_frame:
-          Value: true
-        map:
-          Value: true
-        odom:
-          Value: true
-        rear_caster_link:
-          Value: true
-        sick_link:
-          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -270,34 +314,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_footprint:
-              base_link:
-                dorso_link:
-                  doris_arm/base_link:
-                    {}
-                  head_root:
-                    {}
-                  kinect2_link:
-                    kinect2_depth_frame:
-                      kinect2_depth_optical_frame:
-                        {}
-                    kinect2_rgb_frame:
-                      {}
-                    kinect2_rgb_optical_frame:
-                      kinect2_ir_optical_frame:
-                        {}
-                  sick_link:
-                    {}
-                frontal_caster_link:
-                  {}
-                hokuyo_link:
-                  {}
-                rear_caster_link:
-                  {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 0.699999988079071
       Class: rviz/Map
       Color Scheme: map
@@ -686,10 +705,29 @@ Visualization Manager:
       Value: true
     - Class: rviz/MarkerArray
       Enabled: true
-      Marker Topic: /butia_vision/pt/people_tracking_markers
+      Marker Topic: /butia_vision/br/object_recognition_markers
       Name: MarkerArray
       Namespaces:
-        {}
+        bboxes: true
+        texts: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /butia_vision/br/object_recognition_markers
+      Name: MarkerArray
+      Namespaces:
+        bboxes: true
+        texts: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /butia_vision/br/object_recognition_markers
+      Name: MarkerArray
+      Namespaces:
+        bboxes: true
+        texts: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -720,7 +758,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.457343578338623
+      Distance: 2.145615577697754
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -736,9 +774,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.44158321619033813
+      Pitch: 0.9365827441215515
       Target Frame: base_footprint
-      Yaw: 1.626668930053711
+      Yaw: 3.226661443710327
     Saved:
       - Class: rviz/Orbit
         Distance: 8.172611236572266
