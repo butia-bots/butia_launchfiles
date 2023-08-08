@@ -27,9 +27,9 @@
         <arg name="camera" value="$(arg camera)"/>
     </include>
 
-    <include file="$(find butia_recognition)/launch/yolov8_bag_recognition.launch">
+    <!-- <include file="$(find butia_recognition)/launch/yolov8_bag_recognition.launch">
         <arg name="machine" value="jetson"/>
-    </include>
+    </include> -->
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
 </launch>
