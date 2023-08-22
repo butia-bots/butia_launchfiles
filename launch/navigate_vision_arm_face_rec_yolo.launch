@@ -1,12 +1,12 @@
 <launch>
     <arg name="output" default="screen"/>
-    <arg name="use_machine" default="true"/>
     <arg name="slam_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="realsense"/>
+    <arg name="tracking_config_file" default="yolo_tracker_face_recognition.yaml"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
@@ -20,7 +20,7 @@
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
     </include>
-    
+
     <machine
         name="jetson"
         address="jetson"
@@ -28,17 +28,16 @@
         default="false"
         user="jetson"
     />
-
-    <!-- <include file="$(find butia_vision_launchfiles)/people_tracking.launch">
-        <arg name="machine" value="jetson"/>
-        <arg name="camera" value="None"/>
-        <remap from="/butia_vision/br/people_detection" to="/butia_vision/br/recognitions2D"/>
-    </include> -->
-
-    <include file="$(find butia_vision_launchfiles)/yolo_tracker_bag_recognition.launch">
+  
+    <include file="$(find butia_vision_launchfiles)/face_rec.launch">
         <arg name="machine" value="jetson"/>
         <arg name="camera" value="$(arg camera)"/>
-        <arg name="config_file" value="yolo_tracker_bag_recognition.yaml"/>
+    </include>
+
+    <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
+        <arg name="machine" value="jetson"/>
+        <arg name="camera" value="None"/>
+        <arg name="config_file" value="$(arg tracking_config_file)"/>
     </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>

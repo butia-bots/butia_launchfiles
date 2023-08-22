@@ -15,6 +15,7 @@
     <include file="$(find butia_navigation_launchfiles)/slam-doris-base.launch">
         <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
+    
     <!--include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/-->
 
     <!--include file="$(find robotFace)/launch/face.launch">
