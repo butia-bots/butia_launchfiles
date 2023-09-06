@@ -77,6 +77,75 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link_static:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/ee_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/ee_gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/fingers_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/gripper_bar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/gripper_prop_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        doris_arm/left_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/right_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        doris_arm/wrist_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         dorso_link:
           Alpha: 1
           Show Axes: false
@@ -92,7 +161,25 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        head_pan_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_pan_link_static:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         head_root:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        head_tilt_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_tilt_link_static:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -223,6 +310,20 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
+        camera_aligned_depth_to_color_frame:
+          Value: true
+        camera_color_frame:
+          Value: true
+        camera_color_optical_frame:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
+        camera_link_static:
+          Value: true
         doris_arm/base_link:
           Value: true
         doris_arm/ee_arm_link:
@@ -231,23 +332,47 @@ Visualization Manager:
           Value: true
         doris_arm/fingers_link:
           Value: true
+        doris_arm/forearm_link:
+          Value: true
         doris_arm/gripper_bar_link:
           Value: true
         doris_arm/gripper_link:
+          Value: true
+        doris_arm/gripper_prop_link:
+          Value: true
+        doris_arm/left_finger_link:
+          Value: true
+        doris_arm/right_finger_link:
+          Value: true
+        doris_arm/shoulder_link:
+          Value: true
+        doris_arm/upper_arm_link:
+          Value: true
+        doris_arm/wrist_link:
           Value: true
         dorso_link:
           Value: true
         frontal_caster_link:
           Value: true
+        head_link:
+          Value: true
+        head_pan_link:
+          Value: true
+        head_pan_link_static:
+          Value: true
         head_root:
           Value: true
+        head_tilt_link:
+          Value: true
+        head_tilt_link_static:
+          Value: true
         hokuyo_link:
+          Value: true
+        jaw_link:
           Value: true
         kinect2_depth_frame:
           Value: true
         kinect2_depth_optical_frame:
-          Value: true
-        kinect2_ir_optical_frame:
           Value: true
         kinect2_link:
           Value: true
@@ -255,11 +380,41 @@ Visualization Manager:
           Value: true
         kinect2_rgb_optical_frame:
           Value: true
+        left_eye_horizontal_link:
+          Value: true
+        left_eye_vertical_link:
+          Value: true
+        left_inferior_eyelid_link:
+          Value: true
+        left_rotacional_eyebrow_link:
+          Value: true
+        left_superior_eyelid_link:
+          Value: true
+        left_vertical_eyebrow_link:
+          Value: true
+        left_wheel_link:
+          Value: true
         map:
+          Value: true
+        neck_link:
           Value: true
         odom:
           Value: true
         rear_caster_link:
+          Value: true
+        right_eye_horizontal_link:
+          Value: true
+        right_eye_vertical_link:
+          Value: true
+        right_inferior_eyelid_link:
+          Value: true
+        right_rotacional_eyebrow_link:
+          Value: true
+        right_superior_eyelid_link:
+          Value: true
+        right_vertical_eyebrow_link:
+          Value: true
+        right_wheel_link:
           Value: true
         sick_link:
           Value: true
@@ -276,17 +431,68 @@ Visualization Manager:
               base_link:
                 dorso_link:
                   doris_arm/base_link:
-                    {}
+                    doris_arm/shoulder_link:
+                      doris_arm/upper_arm_link:
+                        doris_arm/forearm_link:
+                          doris_arm/wrist_link:
+                            doris_arm/gripper_link:
+                              doris_arm/ee_arm_link:
+                                doris_arm/gripper_bar_link:
+                                  doris_arm/fingers_link:
+                                    doris_arm/ee_gripper_link:
+                                      {}
+                                    doris_arm/left_finger_link:
+                                      {}
+                                    doris_arm/right_finger_link:
+                                      {}
+                                doris_arm/gripper_prop_link:
+                                  {}
+                  head_pan_link:
+                    head_tilt_link:
+                      camera_link:
+                        camera_aligned_depth_to_color_frame:
+                          camera_color_optical_frame:
+                            {}
+                        camera_color_frame:
+                          {}
+                        camera_depth_frame:
+                          camera_depth_optical_frame:
+                            {}
+                  head_pan_link_static:
+                    head_tilt_link_static:
+                      camera_link_static:
+                        {}
                   head_root:
-                    {}
+                    neck_link:
+                      head_link:
+                        jaw_link:
+                          {}
+                        left_eye_horizontal_link:
+                          left_eye_vertical_link:
+                            {}
+                        left_inferior_eyelid_link:
+                          {}
+                        left_superior_eyelid_link:
+                          {}
+                        left_vertical_eyebrow_link:
+                          left_rotacional_eyebrow_link:
+                            {}
+                        right_eye_horizontal_link:
+                          right_eye_vertical_link:
+                            {}
+                        right_inferior_eyelid_link:
+                          {}
+                        right_superior_eyelid_link:
+                          {}
+                        right_vertical_eyebrow_link:
+                          right_rotacional_eyebrow_link:
+                            {}
                   kinect2_link:
                     kinect2_depth_frame:
                       kinect2_depth_optical_frame:
                         {}
                     kinect2_rgb_frame:
-                      {}
-                    kinect2_rgb_optical_frame:
-                      kinect2_ir_optical_frame:
+                      kinect2_rgb_optical_frame:
                         {}
                   sick_link:
                     {}
@@ -294,7 +500,11 @@ Visualization Manager:
                   {}
                 hokuyo_link:
                   {}
+                left_wheel_link:
+                  {}
                 rear_caster_link:
+                  {}
+                right_wheel_link:
                   {}
       Update Interval: 0
       Value: true
@@ -692,6 +902,16 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /pub/markers
+      Name: MarkerArray
+      Namespaces:
+        "": true
+        bboxes: true
+        texts: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -720,7 +940,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.457343578338623
+      Distance: 8.312625885009766
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -736,9 +956,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.44158321619033813
+      Pitch: 0.4665830135345459
       Target Frame: base_footprint
-      Yaw: 1.626668930053711
+      Yaw: 3.1716692447662354
     Saved:
       - Class: rviz/Orbit
         Distance: 8.172611236572266
