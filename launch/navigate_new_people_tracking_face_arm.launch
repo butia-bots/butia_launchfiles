@@ -7,14 +7,14 @@
     <arg name="use_rviz" default="true"/>
     <arg name="camera" default="kinect"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
-    <arg name="known_map" default="true"/>
+    <arg name="unknown_map" default="true"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+    <include file="$(find butia_navigation_launchfiles)/navigate-slam-with-map.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
-        <arg name="known_map" default="$(arg known_map)"/>
+        <arg name="unknown_map" default="$(arg unknown_map)"/>
     </include>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
