@@ -11,7 +11,7 @@
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-slam-with-map.launch">
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
         <arg name="unknown_map" default="$(arg unknown_map)"/>
