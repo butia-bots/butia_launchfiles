@@ -8,6 +8,7 @@
     <arg name="camera" default="kinect"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="true"/>
+    <arg name="frame" default="map"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
@@ -21,6 +22,7 @@
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
+        <arg name="frame" value="$(arg frame)"/>
     </include>
     
     <machine
