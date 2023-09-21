@@ -33,6 +33,7 @@
     />
     <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
         <arg name="machine" value="jetson"/>
+        <arg name="bvb_machine" value="localhost"/>
         <arg name="camera" value="$(arg camera)"/>
     </include>
 
