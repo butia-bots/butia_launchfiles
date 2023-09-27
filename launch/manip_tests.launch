@@ -30,6 +30,7 @@
     />
   
     <include file="$(find butia_vision_launchfiles)/object_recognition.launch">
+        <arg name="bvb_machine" value="localhost"/>
         <arg name="machine" value="jetson"/>
         <arg name="camera" value="$(arg camera)"/>
     </include>

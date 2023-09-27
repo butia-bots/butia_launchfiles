@@ -5,12 +5,14 @@
     <arg name="face_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
+    <arg name="unknown_map" default="false"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
     <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
+        <arg name="unknown_map" value="$(arg unknown_map)"/>
     </include>
 
     <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>

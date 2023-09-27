@@ -8,7 +8,7 @@
     <arg name="camera" default="kinect"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="true"/>
-    <arg name="frame" default="map"/>
+    <arg name="frame" default="odom"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
 
@@ -34,6 +34,7 @@
     />
     <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
         <arg name="machine" value="jetson"/>
+        <arg name="bvb_machine" value="localhost"/>
         <arg name="camera" value="$(arg camera)"/>
     </include>
 
