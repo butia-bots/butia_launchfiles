@@ -1,0 +1,36 @@
+<launch>
+    <arg name="output" default="screen"/>
+    <arg name="navigate_output" default="$(arg output)"/>
+    <arg name="vision_output" default="$(arg output)"/>
+    <arg name="use_rviz" default="true"/>
+    <arg name="use_sim" default="false"/>
+    <arg name="face_output" default="$(arg output)"/>
+    <arg name="camera" default=""/>
+
+
+    <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
+
+    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch" />
+
+    <include file="$(find butia_navigation_launchfiles)/navigate-slam-doris-base.launch"/>
+    
+    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch">
+        <arg name="use_gazebo" value="true" />
+        <arg name="use_actual" value="false" />
+    </include>
+
+    <include file="$(find butia_recognition)/launch/yolov8_object_recognition.launch">
+        <arg name="config_file" value="fast-sam.yaml"/>
+    </include>
+
+    <rosparam file="$(find butia_world)/config/plugin.yaml" ns="butia_world" command="load" />
+    <node pkg="butia_world" type="pose.py" name="pose" output="log">
+    </node>
+
+    <node pkg="butia_world" type="object_recognition_writer.py" name="object_recognition_writer" output="log">
+    </node>
+
+    <group if="$(arg use_rviz)">
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_people_tracking.rviz" output="$(arg output)"/>
+    </group>
+</launch>
