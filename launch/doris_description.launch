@@ -3,6 +3,7 @@
     <arg name="robot_model" default="doris_arm"/>
 
     <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true"/>
+    <param name="doris_arm/robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
         <rosparam param="source_list">["doris_head/joint_states"]</rosparam>
