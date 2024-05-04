@@ -1,0 +1,45 @@
+<launch>
+    <arg name="output" default="screen"/>
+    <arg name="navigate_output" default="$(arg output)"/>
+    <arg name="vision_output" default="$(arg output)"/>
+    <arg name="use_rviz" default="true"/>
+    <arg name="use_sim" default="false"/>
+    <arg name="face_output" default="$(arg output)"/>
+    <arg name="camera" default=""/>
+
+
+    <include file="$(find butia_launchfiles)/launch/doris_description.launch">
+        <arg name="robot_name" value="doris_arm" />
+        <arg name="robot_model" value="doris_arm" />
+    </include>
+
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+        <arg name="map" value="$(find doris_simulation_larc2021)/maps/wrs2020/map.yaml"/>
+    </include>
+    
+    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch">
+        <arg name="use_gazebo" value="true" />
+        <arg name="use_actual" value="false" />
+    </include>
+
+    <include file="$(find butia_recognition)/launch/yolov8_object_recognition.launch">
+        <arg name="config_file" value="object_recognition_research.yaml"/>
+    </include>
+    <!--node name="camera_transform_publisher" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 1 camera_link camera_color_optical_frame" /-->
+    <include file="$(find butia_world)/launch/pose_research_sim.launch" />
+
+    <!--node pkg="butia_world" type="object_recognition_writer.py" name="object_recognition_writer" output="log">
+    </node-->
+
+    <include file="$(find robotFace)/launch/face.launch">
+        <arg name="output" value="$(arg face_output)"/>
+    </include>
+
+    <include file="$(find butia_speech)/launch/speech_to_text.launch" />
+
+    <include file="$(find butia_speech)/launch/synthesizer_speech.launch" />
+
+    <group if="$(arg use_rviz)">
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_people_tracking.rviz" output="$(arg output)"/>
+    </group>
+</launch>

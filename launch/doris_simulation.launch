@@ -1,9 +1,9 @@
 <launch>
-    <include file="$(find aws_robomaker_small_house_world)/launch/small_house.launch">
-        <arg name="gui" value="true"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find doris_simulation_larc2021)/worlds/wrs2020.world"/>
     </include>
 
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model doris -z 1" />
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param doris_arm/robot_description -urdf -model doris -z 0 -x -2.4 -y 2.4 -Y -1.570" />
     <!-- Camera controllers -->
     <rosparam command="load" file="$(find doris_sensors_description)/config/camera_controllers_sim.yaml" ns="doris_head"/>
     <!-- Start controllers -->
