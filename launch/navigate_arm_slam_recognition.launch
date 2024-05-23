@@ -23,10 +23,10 @@
     </include>
 
     <include file="$(find butia_recognition)/launch/yolov8_object_recognition.launch">
-        <arg name="config_file" value="object_recognition_research.yaml"/>
+        <arg name="config_file" value="yolov8_worldv2_object_recognition.yaml"/>
     </include>
     <!--node name="camera_transform_publisher" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 1 camera_link camera_color_optical_frame" /-->
-    <include file="$(find butia_world)/launch/pose_research_sim.launch" />
+    <!--include file="$(find butia_world)/launch/pose_research_sim.launch" /-->
 
     <!--node pkg="butia_world" type="object_recognition_writer.py" name="object_recognition_writer" output="log">
     </node-->
