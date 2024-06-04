@@ -16,7 +16,7 @@
     <machine
         name="jetson"
         address="jetson"
-        env-loader="/opt/ros/melodic/env_jetson.sh"
+        env-loader="/opt/ros/noetic/env_jetson.sh"
         default="false"
         user="jetson"
     />

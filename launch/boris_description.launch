@@ -1,0 +1,3 @@
+<launch>
+    <include file="$(find shark-mb-ros)/launch/shark_v1_description.launch"/>
+</launch>

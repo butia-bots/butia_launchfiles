@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find butia_launchfiles)/launch/machines.launch"/>
+
+    <rosparam param="whitelist" value="$(env ROBOT_MODEL)"/>
+    
+    <include file="$(find butia_speech)/launch/synthesizer_speech_ml.launch">
+        <arg name="speech_synthesizer_machine" value="jetson"/>
+    </include>
+</launch>
