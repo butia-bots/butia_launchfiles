@@ -10,9 +10,9 @@
     <arg name="unknown_map" default="true"/>
     <arg name="frame" default="odom"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
+    <include file="$(find butia_launchfiles)/launch/description.launch"/>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+    <include file="$(find butia_navigation_launchfiles)/navigate.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
         <arg name="unknown_map" default="$(arg unknown_map)"/>
@@ -25,13 +25,8 @@
         <arg name="frame" value="$(arg frame)"/>
     </include>
     
-    <machine
-        name="jetson"
-        address="jetson"
-        env-loader="/opt/ros/melodic/env_jetson.sh"
-        default="false"
-        user="jetson"
-    />
+    <include file="$(find butia_launchfiles)/launch/machines.launch"/>
+    
     <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
         <arg name="machine" value="jetson"/>
         <arg name="bvb_machine" value="localhost"/>
