@@ -12,13 +12,14 @@
 
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
 
-    <include file="$(find butia_navigation_launchfiles)/navigate.launch">
+    <include file="$(find butia_launchfiles)/launch/navigate.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
         <arg name="unknown_map" default="$(arg unknown_map)"/>
+        <arg name="use_rviz" value="false"/>
     </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <!-- <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/> -->
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
@@ -28,7 +29,7 @@
     <include file="$(find butia_launchfiles)/launch/machines.launch"/>
     
     <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
-        <arg name="machine" value="jetson"/>
+        <arg name="machine" value="localhost"/>
         <arg name="bvb_machine" value="localhost"/>
         <arg name="camera" value="$(arg camera)"/>
     </include>

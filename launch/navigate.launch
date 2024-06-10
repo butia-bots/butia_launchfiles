@@ -1,13 +1,15 @@
 <launch>
     <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
 
-    <arg name="output" value="$(arg navigate_output)"/>
-    <arg name="observation_sources" value="$(arg observation_sources)"/>
-    <arg name="unknown_map" default="$(arg unknown_map)"/>
+    <arg name="output" default="screen"/>
+    <arg name="observation_sources" default="body_scan ground_scan back_scan"/>
+    <arg name="unknown_map" default="False"/>
+    <arg name="map" default="$(find shark-mb-ros)/maps/itec.yaml"/>
+    <arg name="use_rviz" default="true"/>
 
     <group if="$(eval ROBOT == 'DORIS')">
         <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
-            <arg name="output" value="$(arg navigate_output)"/>
+            <arg name="output" value="$(arg output)"/>
             <arg name="observation_sources" value="$(arg observation_sources)"/>
             <arg name="map" value="$(arg map)"/>
         </include>
@@ -15,9 +17,10 @@
 
     <group if="$(eval ROBOT == 'BORIS')">
         <include file="$(find shark-mb-ros)/launch/shark_navigate.launch">
-            <arg name="output" value="$(arg navigate_output)"/>
+            <arg name="output" value="$(arg output)"/>
             <arg name="observation_sources" value="$(arg observation_sources)"/>
             <arg name="map" value="$(arg map)"/>
+            <arg name="use_rviz" value="$(arg use_rviz)"/>
         </include>
     </group>
 </launch>

@@ -1,9 +1,9 @@
 <launch>
     <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
-    <group if="$(eval ROBOT == DORIS)">
-        <include file="$(find butia_launchfiles)/launch/doris_description"/>
+    <group if="$(eval ROBOT == 'DORIS')">
+        <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
     </group>
-    <group if="$(eval ROBOT == BORIS)">
-        <include file="$(find butia_launchfiles)/launch/boris_description"/>
+    <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find butia_launchfiles)/launch/boris_description.launch"/>
     </group>
 </launch>
