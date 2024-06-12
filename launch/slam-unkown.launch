@@ -1,0 +1,11 @@
+<launch>
+    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+    <group if="$(eval ROBOT == 'DORIS')">
+        <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
+            <arg name="observation_sources" value="$(arg observation_sources)"/>
+        </include>
+    </group>
+    <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find shark-mb-ros)/launch/offline_slam.launch"/>
+    </group>
+</launch>
