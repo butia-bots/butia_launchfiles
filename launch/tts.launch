@@ -5,7 +5,7 @@
 
     <group if="$(eval ROBOT == 'DORIS')">
         <include file="$(find butia_speech)/launch/synthesizer_speech.launch"/>
-        </group>
+    </group>
         
     <group if="$(eval ROBOT == 'BORIS')">
         <include file="$(find butia_launchfiles)/launch/machines.launch"/>
