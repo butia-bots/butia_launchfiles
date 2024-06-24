@@ -1,32 +1,23 @@
 <launch>
-    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
     <arg name="output" default="screen"/>
     <arg name="navigate_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
-    <arg name="observation_sources" default="body_scan ground_scan back_scan"/>
+    <arg name="camera" default="realsense"/>
+    <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="true"/>
     <arg name="frame" default="odom"/>
 
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
 
-    <group if="$(eval ROBOT == 'DORIS')">
-        <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
-            <arg name="output" value="$(arg navigate_output)"/>
-            <arg name="observation_sources" value="$(arg observation_sources)"/>
-        </include>
-    </group>
-    <group if="$(eval ROBOT == 'BORIS')">
-        <include file="$(find shark-mb-ros)/slam-boris-unknown.launch">
-            <arg name="output" value="$(arg navigate_output)"/>
-            <arg name="observation_sources" value="$(arg observation_sources)"/>
-        </include>
-    </group>
+    <include file="$(find butia_launchfiles)/launch/slam-unknown.launch">
+        <arg name="output" value="$(arg navigate_output)"/>
+        <arg name="observation_sources" value="$(arg observation_sources)"/>
+    </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <!-- <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/> -->
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
