@@ -5,7 +5,7 @@
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="true"/>
     <arg name="frame" default="odom"/>
@@ -29,10 +29,11 @@
     <include file="$(find butia_launchfiles)/launch/machines.launch"/>
     
     <include file="$(find butia_vision_launchfiles)/yolo_tracker_recognition.launch">
-        <arg name="machine" value="localhost"/>
+        <arg name="machine" value="jetson"/>
         <arg name="bvb_machine" value="localhost"/>
         <arg name="camera" value="$(arg camera)"/>
+        <arg name="output" value="$(arg output)"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz"  output="$(arg output)"/>
+    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/inspection.rviz" output="$(arg output)"/>
 </launch>

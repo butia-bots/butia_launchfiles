@@ -3,8 +3,8 @@
 
     <arg name="output" default="screen"/>
     <arg name="observation_sources" default="body_scan ground_scan back_scan"/>
-    <arg name="unknown_map" default="False"/>
-    <arg name="map" default="$(find shark-mb-ros)/maps/itec.yaml"/>
+    <arg name="unknown_map" default="false"/>
+    <arg name="map" default="$(find shark-mb-ros)/maps/corredor_itec.yaml"/>
     <arg name="use_rviz" default="true"/>
 
     <group if="$(eval ROBOT == 'DORIS')">
