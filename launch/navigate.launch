@@ -20,6 +20,7 @@
             <arg name="output" value="$(arg output)"/>
             <arg name="observation_sources" value="$(arg observation_sources)"/>
             <arg name="map" value="$(arg map)"/>
+            <arg name="unknown_map" value="$(arg unknown_map)"/>
             <arg name="use_rviz" value="$(arg use_rviz)"/>
         </include>
     </group>

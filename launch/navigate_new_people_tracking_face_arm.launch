@@ -7,7 +7,7 @@
     <arg name="use_rviz" default="true"/>
     <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
-    <arg name="unknown_map" default="true"/>
+    <arg name="unknown_map" default="false"/>
     <arg name="frame" default="odom"/>
 
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
@@ -19,7 +19,7 @@
         <arg name="use_rviz" value="false"/>
     </include>
 
-    <!-- <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/> -->
+    <!-- <include file="$(find butia_launchfiles)/launch/manipulation.launch"/> -->
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>

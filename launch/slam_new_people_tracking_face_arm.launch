@@ -14,6 +14,7 @@
 
     <include file="$(find butia_launchfiles)/launch/slam-unknown.launch">
         <arg name="output" value="$(arg navigate_output)"/>
+        <arg name="unknown_map" value="$(arg unknown_map)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
 
