@@ -1,0 +1,11 @@
+<launch>
+    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+
+    <group if="$(eval ROBOT == 'DORIS')">
+        <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    </group>
+
+    <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch"/>
+    </group>
+</launch>
