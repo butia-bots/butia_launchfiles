@@ -14,7 +14,7 @@
         <arg name="camera" value="$(arg camera)"/>
     </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
 
     <group if="$(arg use_rviz)">
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>

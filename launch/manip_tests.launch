@@ -9,25 +9,19 @@
     <arg name="tracking_config_file" default="yolo_tracker_face_recognition.yaml"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
-    
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+    <include file="$(find butia_launchfiles)/launch/description.launch"/>
+
+    <include file="$(find butia_launchfiles)/launch/navigate.launch">
         <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
     </include>
 
-    <machine
-        name="jetson"
-        address="jetson"
-        env-loader="/opt/ros/melodic/env_jetson.sh"
-        default="false"
-        user="jetson"
-    />
+    <include file="$(find butia_launchfiles)/launch/machines.launch"/>
   
     <include file="$(find butia_vision_launchfiles)/object_recognition.launch">
         <arg name="bvb_machine" value="localhost"/>
