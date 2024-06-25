@@ -4,7 +4,7 @@
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="real_sense"/>
 
     <include file="$(find butia_launchfiles)/launch/navigate_vision.launch">
         <arg name="output" value="$(arg output)"/>

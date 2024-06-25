@@ -3,7 +3,7 @@
     <arg name="navigate_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="real_sense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>    
 
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
@@ -11,6 +11,7 @@
     <include file="$(find butia_launchfiles)/launch/navigate.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
+        <arg name="use_rviz" value="false"/>
     </include>
     
     <include file="$(find butia_launchfiles)/launch/machines.launch"/>
