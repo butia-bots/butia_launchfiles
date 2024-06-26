@@ -21,6 +21,10 @@
 
     <!-- <include file="$(find butia_launchfiles)/launch/manipulation.launch"/> -->
 
+    <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
+        <arg name="use_moveit_rviz" value="false"/>
+    </include>    
+
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
         <arg name="frame" value="$(arg frame)"/>
