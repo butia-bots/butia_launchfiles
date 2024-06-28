@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: butia_launchfiles
-Description: Description of butia_launchfiles
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
