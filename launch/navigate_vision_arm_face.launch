@@ -5,13 +5,12 @@
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="real_sense"/>
 
     <include file="$(find butia_launchfiles)/launch/navigate_vision_arm.launch">
         <arg name="output" value="$(arg output)"/>
         <arg name="navigate_output" value="$(arg navigate_output)"/>
         <arg name="vision_output" value="$(arg vision_output)"/>
-        <arg name="bvb_machine" value="localhost"/>
         <arg name="arm_output" value="$(arg arm_output)"/>
         <arg name="use_rviz" value="false"/>
         <arg name="camera" value="$(arg camera)"/>

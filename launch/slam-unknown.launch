@@ -1,0 +1,18 @@
+<launch>
+    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+    <arg name="unknown_map" default="true"/>
+    <arg name="observation_sources" default="body_scan ground_scan"/>
+    <arg name="output" default="screen"/>
+
+    <group if="$(eval ROBOT == 'DORIS')">
+        <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
+            <arg name="observation_sources" value="$(arg observation_sources)"/>
+        </include>
+    </group>
+    <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find shark-mb-ros)/launch/slam-boris-unknown.launch">
+            <arg name="unknown_map" value="$(arg unknown_map)"/>
+            <arg name="observation_sources" value="$(arg observation_sources)"/>
+        </include>
+    </group>
+</launch>

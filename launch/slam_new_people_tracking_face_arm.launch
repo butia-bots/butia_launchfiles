@@ -19,7 +19,11 @@
         <arg name="use_rviz" value="false"/>
     </include>
 
-    <!-- <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/> -->
+    <!-- <include file="$(find butia_launchfiles)/launch/manipulation.launch"/> -->
+
+    <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
+        <arg name="use_moveit_rviz" value="$(arg use_moveit_rviz)"/>
+    </include>    
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
