@@ -4,6 +4,7 @@
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
+    <arg name="use_moveit_rviz" default="false"/>
     <arg name="use_rviz" default="true"/>
     <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
@@ -12,11 +13,10 @@
 
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
 
-    <include file="$(find butia_launchfiles)/launch/slam-unkown.launch">
+    <include file="$(find butia_launchfiles)/launch/slam-unknown.launch">
         <arg name="output" value="$(arg navigate_output)"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
         <arg name="unknown_map" default="$(arg unknown_map)"/>
-        <arg name="use_rviz" value="false"/>
     </include>
 
     <!-- <include file="$(find butia_launchfiles)/launch/manipulation.launch"/> -->

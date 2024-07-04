@@ -16,13 +16,6 @@
     
     <include file="$(find butia_launchfiles)/launch/machines.launch"/>
 
-    <include file="$(find butia_vision_bridge)/launch/butia_vision_bridge.launch">
-        <arg name="machine" value="jetson"/>
-        <arg name="output" value="$(arg vision_output)"/>
-        <arg name="publish_tf" value="true"/>
-        <arg name="camera" value="$(arg camera)"/>
-    </include>
-
     <group if="$(arg use_rviz)">
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision.rviz" output="$(arg output)"/>
     </group>
