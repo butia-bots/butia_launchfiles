@@ -19,11 +19,11 @@
         <arg name="unknown_map" default="$(arg unknown_map)"/>
     </include>
 
-    <!-- <include file="$(find butia_launchfiles)/launch/manipulation.launch"/> -->
-
+    <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
+<!-- 
     <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
         <arg name="use_moveit_rviz" value="$(arg use_moveit_rviz)"/>
-    </include>    
+    </include>     -->
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
@@ -39,5 +39,5 @@
         <arg name="output" value="$(arg output)"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/inspection.rviz" output="$(arg output)"/>
+    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/carry_my_luggage.rviz" output="$(arg output)"/>
 </launch>

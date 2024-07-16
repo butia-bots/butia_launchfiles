@@ -1,8 +1,8 @@
 <launch>
     <arg name="output" default="screen"/>
+    <arg name="face_output" default="$(arg output)"/>
     <arg name="slam_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
-    <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
     <arg name="camera" default="realsense"/>

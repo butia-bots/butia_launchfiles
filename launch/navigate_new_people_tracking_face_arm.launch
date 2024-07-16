@@ -8,7 +8,7 @@
     <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="false"/>
-    <arg name="frame" default="odom"/>
+    <arg name="frame" default="map"/>
 
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
 
@@ -39,5 +39,5 @@
         <arg name="output" value="$(arg output)"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/inspection.rviz" output="$(arg output)"/>
+    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/carry_my_luggage.rviz" output="$(arg output)"/>
 </launch>

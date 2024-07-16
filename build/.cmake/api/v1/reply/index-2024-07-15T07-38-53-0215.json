@@ -3,38 +3,39 @@
 	{
 		"generator" : 
 		{
+			"multiConfig" : false,
 			"name" : "Unix Makefiles"
 		},
 		"paths" : 
 		{
-			"cmake" : "/usr/bin/cmake",
-			"cpack" : "/usr/bin/cpack",
-			"ctest" : "/usr/bin/ctest",
-			"root" : "/usr/share/cmake-3.16"
+			"cmake" : "/home/fbotathome/.local/lib/python3.8/site-packages/cmake/data/bin/cmake",
+			"cpack" : "/home/fbotathome/.local/lib/python3.8/site-packages/cmake/data/bin/cpack",
+			"ctest" : "/home/fbotathome/.local/lib/python3.8/site-packages/cmake/data/bin/ctest",
+			"root" : "/home/fbotathome/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.30"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 16,
-			"patch" : 3,
-			"string" : "3.16.3",
+			"minor" : 30,
+			"patch" : 0,
+			"string" : "3.30.0",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-20749d2954c8db0f9741.json",
+			"jsonFile" : "codemodel-v2-42fee8480f9c8cbaa1cb.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
 				"major" : 2,
-				"minor" : 0
+				"minor" : 7
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-0290aff8dcd47b919947.json",
+			"jsonFile" : "cache-v2-0acf87635e048c4b960e.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -43,8 +44,17 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-180480f614afe962868e.json",
+			"jsonFile" : "cmakeFiles-v1-04c7eda313337fb3e769.json",
 			"kind" : "cmakeFiles",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 1
+			}
+		},
+		{
+			"jsonFile" : "toolchains-v1-d37530156d1fc1d1b91b.json",
+			"kind" : "toolchains",
 			"version" : 
 			{
 				"major" : 1,
@@ -80,7 +90,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-0290aff8dcd47b919947.json",
+						"jsonFile" : "cache-v2-0acf87635e048c4b960e.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -89,24 +99,30 @@
 						}
 					},
 					{
-						"jsonFile" : "codemodel-v2-20749d2954c8db0f9741.json",
+						"jsonFile" : "codemodel-v2-42fee8480f9c8cbaa1cb.json",
 						"kind" : "codemodel",
 						"version" : 
 						{
 							"major" : 2,
-							"minor" : 0
+							"minor" : 7
 						}
 					},
 					{
-						"error" : "unknown request kind 'toolchains'"
-					},
-					{
-						"jsonFile" : "cmakeFiles-v1-180480f614afe962868e.json",
-						"kind" : "cmakeFiles",
+						"jsonFile" : "toolchains-v1-d37530156d1fc1d1b91b.json",
+						"kind" : "toolchains",
 						"version" : 
 						{
 							"major" : 1,
 							"minor" : 0
+						}
+					},
+					{
+						"jsonFile" : "cmakeFiles-v1-04c7eda313337fb3e769.json",
+						"kind" : "cmakeFiles",
+						"version" : 
+						{
+							"major" : 1,
+							"minor" : 1
 						}
 					}
 				]

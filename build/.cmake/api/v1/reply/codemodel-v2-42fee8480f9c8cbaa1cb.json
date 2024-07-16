@@ -11,6 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-992d76d85c3c401add29.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0.2"
@@ -33,6 +34,7 @@
 					[
 						2
 					],
+					"jsonFile" : "directory-gtest-Debug-40f9edd0af6c04d6f946.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.8"
@@ -47,6 +49,7 @@
 					[
 						3
 					],
+					"jsonFile" : "directory-gtest.googlemock-Debug-8fd0af86403c015b5fbc.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.6.4"
@@ -62,6 +65,7 @@
 				},
 				{
 					"build" : "gtest/googletest",
+					"jsonFile" : "directory-gtest.googletest-Debug-5804ba12edef54b53d36.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.6.4"
@@ -175,28 +179,28 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock::@e3f94eedc5dc07131386",
-					"jsonFile" : "target-gmock-Debug-69169baafe832ee41c64.json",
+					"jsonFile" : "target-gmock-Debug-2e960eb9ff0af967752d.json",
 					"name" : "gmock",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock_main::@e3f94eedc5dc07131386",
-					"jsonFile" : "target-gmock_main-Debug-2c5d61974873ef4068ae.json",
+					"jsonFile" : "target-gmock_main-Debug-065e227dd76dd01850ba.json",
 					"name" : "gmock_main",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest::@b738d542747fbb7ea6e3",
-					"jsonFile" : "target-gtest-Debug-d898f45654e826fa9517.json",
+					"jsonFile" : "target-gtest-Debug-9b7028025d4953847b9b.json",
 					"name" : "gtest",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest_main::@b738d542747fbb7ea6e3",
-					"jsonFile" : "target-gtest_main-Debug-b9e8f62f77bb6f349d2a.json",
+					"jsonFile" : "target-gtest_main-Debug-94e9fe9526f4ded36b15.json",
 					"name" : "gtest_main",
 					"projectIndex" : 3
 				},
@@ -226,6 +230,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 0
+		"minor" : 7
 	}
 }
