@@ -1,16 +1,18 @@
 <launch>
     <arg name="urdf" default="doris.urdf.xacro"/>
     <arg name="robot_model" default="doris_arm"/>
+    <arg name="robot_name" default="doris_arm" />
 
-    <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true"/>
+    <param name="robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true robot_model:=$(arg robot_model) robot_name:=$(arg robot_name)"/>
+    <param name="doris_arm/robot_description" command="xacro $(find doris_description)/urdf/$(arg urdf) load_gazebo_configs:=true robot_model:=$(arg robot_model) robot_name:=$(arg robot_name)"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
-        <rosparam param="source_list">["doris_head/joint_states"]</rosparam>
+        <rosparam param="source_list">["doris_head/joint_states","doris_arm/joint_states"]</rosparam>
     </node>
     <param name="robot_description_semantic"
     command="xacro $(find interbotix_xsarm_moveit)/config/srdf/$(arg robot_model).srdf.xacro
-        robot_name:=doris_arm
-        robot_model:=doris_arm
+        robot_name:=$(arg robot_name)
+        robot_model:=$(arg robot_model)
         base_link_frame:=base_link
         show_ar_tag:=false"/>
 </launch>

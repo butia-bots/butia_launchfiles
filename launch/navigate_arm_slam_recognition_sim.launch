@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find butia_launchfiles)/launch/doris_simulation.launch" />
+    <include file="$(find butia_launchfiles)/launch/navigate_arm_slam_recognition.launch" />
+</launch>
