@@ -9,8 +9,6 @@ Panels:
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planning Metrics1
         - /MotionPlanning1/Planned Path1
-        - /Marker1
-        - /MotionPlanning4
       Splitter Ratio: 0.5625
     Tree Height: 429
   - Class: rviz/Selection
@@ -88,66 +86,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        doris_arm/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/ee_arm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        doris_arm/ee_gripper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        doris_arm/fingers_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        doris_arm/forearm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/gripper_bar_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        doris_arm/gripper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/gripper_prop_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        doris_arm/left_finger_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/right_finger_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/shoulder_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/upper_arm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        doris_arm/wrist_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         dorso_link:
           Alpha: 1
           Show Axes: false
@@ -304,112 +242,10 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        base_footprint:
-          Value: true
-        base_link:
-          Value: true
-        camera_link:
-          Value: true
-        camera_link_static:
-          Value: true
-        doris_arm/base_link:
-          Value: true
-        doris_arm/ee_arm_link:
-          Value: true
-        doris_arm/ee_gripper_link:
-          Value: true
-        doris_arm/fingers_link:
-          Value: true
-        doris_arm/forearm_link:
-          Value: true
-        doris_arm/gripper_bar_link:
-          Value: true
-        doris_arm/gripper_link:
-          Value: true
-        doris_arm/gripper_prop_link:
-          Value: true
-        doris_arm/left_finger_link:
-          Value: true
-        doris_arm/right_finger_link:
-          Value: true
-        doris_arm/shoulder_link:
-          Value: true
-        doris_arm/upper_arm_link:
-          Value: true
-        doris_arm/wrist_link:
-          Value: true
-        dorso_link:
-          Value: true
-        frontal_caster_link:
-          Value: true
-        head_link:
-          Value: true
-        head_pan_link:
-          Value: true
-        head_pan_link_static:
-          Value: true
-        head_root:
-          Value: true
-        head_tilt_link:
-          Value: true
-        head_tilt_link_static:
-          Value: true
-        hokuyo_link:
-          Value: true
-        jaw_link:
-          Value: true
-        kinect2_depth_frame:
-          Value: true
-        kinect2_depth_optical_frame:
-          Value: true
-        kinect2_link:
-          Value: true
-        kinect2_rgb_frame:
-          Value: true
-        kinect2_rgb_optical_frame:
-          Value: true
-        left_eye_horizontal_link:
-          Value: true
-        left_eye_vertical_link:
-          Value: true
-        left_inferior_eyelid_link:
-          Value: true
-        left_rotacional_eyebrow_link:
-          Value: true
-        left_superior_eyelid_link:
-          Value: true
-        left_vertical_eyebrow_link:
-          Value: true
-        left_wheel_link:
-          Value: true
-        map:
-          Value: true
-        neck_link:
-          Value: true
-        odom:
-          Value: true
-        rear_caster_link:
-          Value: true
-        right_eye_horizontal_link:
-          Value: true
-        right_eye_vertical_link:
-          Value: true
-        right_inferior_eyelid_link:
-          Value: true
-        right_rotacional_eyebrow_link:
-          Value: true
-        right_superior_eyelid_link:
-          Value: true
-        right_vertical_eyebrow_link:
-          Value: true
-        right_wheel_link:
-          Value: true
-        sick_link:
-          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -417,82 +253,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_footprint:
-              base_link:
-                dorso_link:
-                  doris_arm/base_link:
-                    doris_arm/shoulder_link:
-                      doris_arm/upper_arm_link:
-                        doris_arm/forearm_link:
-                          doris_arm/wrist_link:
-                            doris_arm/gripper_link:
-                              doris_arm/ee_arm_link:
-                                doris_arm/gripper_bar_link:
-                                  doris_arm/fingers_link:
-                                    doris_arm/ee_gripper_link:
-                                      {}
-                                    doris_arm/left_finger_link:
-                                      {}
-                                    doris_arm/right_finger_link:
-                                      {}
-                                doris_arm/gripper_prop_link:
-                                  {}
-                  head_pan_link:
-                    head_tilt_link:
-                      camera_link:
-                        {}
-                  head_pan_link_static:
-                    head_tilt_link_static:
-                      camera_link_static:
-                        {}
-                  head_root:
-                    neck_link:
-                      head_link:
-                        jaw_link:
-                          {}
-                        left_eye_horizontal_link:
-                          left_eye_vertical_link:
-                            {}
-                        left_inferior_eyelid_link:
-                          {}
-                        left_superior_eyelid_link:
-                          {}
-                        left_vertical_eyebrow_link:
-                          left_rotacional_eyebrow_link:
-                            {}
-                        right_eye_horizontal_link:
-                          right_eye_vertical_link:
-                            {}
-                        right_inferior_eyelid_link:
-                          {}
-                        right_superior_eyelid_link:
-                          {}
-                        right_vertical_eyebrow_link:
-                          right_rotacional_eyebrow_link:
-                            {}
-                  kinect2_link:
-                    kinect2_depth_frame:
-                      kinect2_depth_optical_frame:
-                        {}
-                    kinect2_rgb_frame:
-                      kinect2_rgb_optical_frame:
-                        {}
-                  sick_link:
-                    {}
-                frontal_caster_link:
-                  {}
-                hokuyo_link:
-                  {}
-                left_wheel_link:
-                  {}
-                rear_caster_link:
-                  {}
-                right_wheel_link:
-                  {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 0.699999988079071
       Class: rviz/Map
       Color Scheme: map
@@ -868,7 +631,7 @@ Visualization Manager:
       Queue Size: 100
       Value: true
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: /butia_vision/br/debug
       Max Value: 1
       Median window: 5
@@ -878,7 +641,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: true
+      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /butia_vision/pt/people_tracking_markers
@@ -892,7 +655,9 @@ Visualization Manager:
       Marker Topic: /pub/markers
       Name: MarkerArray
       Namespaces:
-        {}
+        "": true
+        bboxes: true
+        texts: true
       Queue Size: 100
       Value: true
     - Acceleration_Scaling_Factor: 0.5
@@ -944,66 +709,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          doris_arm/base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/ee_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/ee_gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/fingers_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/forearm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_bar_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_prop_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/left_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/right_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/shoulder_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/upper_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/wrist_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           dorso_link:
             Alpha: 1
             Show Axes: false
@@ -1176,7 +881,7 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: arm
+        Planning Group: ""
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -1217,66 +922,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          doris_arm/base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/ee_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/ee_gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/fingers_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/forearm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_bar_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_prop_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/left_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/right_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/shoulder_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/upper_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/wrist_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           dorso_link:
             Alpha: 1
             Show Axes: false
@@ -1488,66 +1133,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          doris_arm/base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/ee_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/ee_gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/fingers_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/forearm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_bar_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_prop_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/left_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/right_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/shoulder_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/upper_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/wrist_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           dorso_link:
             Alpha: 1
             Show Axes: false
@@ -1720,7 +1305,7 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: arm
+        Planning Group: ""
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -1761,66 +1346,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          doris_arm/base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/ee_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/ee_gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/fingers_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/forearm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_bar_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/gripper_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/gripper_prop_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          doris_arm/left_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/right_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/shoulder_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/upper_arm_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          doris_arm/wrist_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           dorso_link:
             Alpha: 1
             Show Axes: false
@@ -2058,7 +1583,7 @@ Visualization Manager:
       Value: true
       Velocity_Scaling_Factor: 0.1
     - Class: rviz/Image
-      Enabled: false
+      Enabled: true
       Image Topic: /butia_vision/br/debug
       Max Value: 1
       Median window: 5
@@ -2068,7 +1593,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -2096,6 +1621,46 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Queue Size: 10
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /move_base/current_goal
+      Unreliable: false
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /area_marker
+      Name: Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /pointed_arrow
+      Name: Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /butia_vision/br/object_recognition_markers
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -2125,7 +1690,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10.260746955871582
+      Distance: 3.5294711589813232
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -2133,17 +1698,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 2.0450220108032227
-        Y: 0.09492462873458862
-        Z: -0.35641971230506897
-      Focal Shape Fixed Size: true
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.0497968196868896
+      Pitch: 0.9303983449935913
       Target Frame: base_footprint
-      Yaw: 3.036670684814453
+      Yaw: 0.8753981590270996
     Saved:
       - Class: rviz/Orbit
         Distance: 8.172611236572266

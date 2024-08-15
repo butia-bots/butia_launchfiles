@@ -27,6 +27,7 @@
     />
 
     <include file="$(find butia_vision_launchfiles)/face_rec.launch">
+        <arg name="bvb_machine" value="localhost"/>
         <arg name="machine" value="jetson"/>
         <arg name="output" value="$(arg vision_output)"/>
         <arg name="publish_tf" value="true"/>
