@@ -1,0 +1,34 @@
+<launch>
+    <arg name="output" default="screen"/>
+    <arg name="navigate_output" default="$(arg output)"/>
+    <arg name="vision_output" default="$(arg output)"/>
+    <arg name="face_output" default="$(arg output)"/>
+
+    <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
+
+    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
+        <arg name="output" value="$(arg navigate_output)"/>
+    </include>
+
+    <include file="$(find robotFace)/launch/face.launch">
+        <arg name="output" value="$(arg face_output)"/>
+    </include>
+    
+    <machine
+        name="jetson"
+        address="jetson"
+        env-loader="/opt/ros/melodic/env_jetson.sh"
+        default="false"
+        user="jetson"
+    />
+    <include file="$(find butia_vision_launchfiles)/people_detection.launch">
+        <arg name="machine" value="jetson"/>
+    </include>
+
+    <include file="$(find butia_vision_launchfiles)/face_rec.launch">
+        <arg name="machine" value="jetson"/>
+        <arg name="camera" value="$(arg camera)"/>
+    </include>
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
+</launch>
