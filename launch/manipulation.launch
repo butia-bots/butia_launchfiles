@@ -1,0 +1,16 @@
+<launch>
+    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+
+    <arg name="use_moveit_rviz" default="false"/>
+
+    <group if="$(eval ROBOT == 'DORIS')">
+        <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+        <arg name="map" value="$(arg map)"/>
+    </group>
+
+    <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
+            <arg name="use_moveit_rviz" value="$(arg use_moveit_rviz)"/>
+        </include>    
+    </group>
+</launch>

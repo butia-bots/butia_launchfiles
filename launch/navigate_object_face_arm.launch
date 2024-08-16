@@ -1,0 +1,44 @@
+<launch>
+    <arg name="output" default="screen"/>
+    <arg name="navigate_output" default="$(arg output)"/>
+    <arg name="vision_output" default="$(arg output)"/>
+    <arg name="face_output" default="$(arg output)"/>
+    <arg name="arm_output" default="$(arg output)"/>
+    <arg name="use_rviz" default="true"/>
+    <arg name="map" default="$(find shark-mb-ros)/maps/arena_holanda.yaml"/>
+    <arg name="camera" default="realsense"/>
+    <arg name="observation_sources" default="body_scan ground_scan"/>
+    <arg name="unknown_map" default="false"/>
+    <arg name="frame" default="map"/>
+
+    <include file="$(find butia_launchfiles)/launch/description.launch"/>
+
+    <include file="$(find butia_launchfiles)/launch/navigate.launch">
+        <arg name="output" value="$(arg navigate_output)"/>
+        <arg name="map" default="$(arg map)"/>
+        <arg name="observation_sources" value="$(arg observation_sources)"/>
+        <arg name="unknown_map" default="$(arg unknown_map)"/>
+        <arg name="use_rviz" value="false"/>
+    </include>
+
+    <!-- <include file="$(find butia_launchfiles)/launch/manipulation.launch"/> -->
+
+    <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
+        <arg name="use_moveit_rviz" value="false"/>
+    </include>    
+
+    <include file="$(find robotFace)/launch/face.launch">
+        <arg name="output" value="$(arg face_output)"/>
+        <arg name="frame" value="$(arg frame)"/>
+    </include>
+    
+    <include file="$(find butia_launchfiles)/launch/machines.launch"/>
+    
+    <include file="$(find butia_vision_launchfiles)/object_recognition.launch">
+        <arg name="bvb_machine" value="localhost"/>
+        <arg name="machine" value="jetson"/>
+        <arg name="camera" value="realsense"/>
+      </include>
+
+    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/serve_breakfast.rviz" output="$(arg output)"/>
+</launch>

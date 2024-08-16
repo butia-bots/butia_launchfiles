@@ -1,0 +1,21 @@
+<launch>
+    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+    <group if="$(eval ROBOT == 'BORIS')">
+        <machine
+            name="jetson"
+            address="jetson"
+            env-loader="/opt/ros/noetic/env_jetson.sh"
+            default="false"
+            user="jetson"
+        />
+    </group>
+    <group if="$(eval ROBOT == 'DORIS')">
+        <machine
+            name="jetson"
+            address="jetson"
+            env-loader="/opt/ros/melodic/env_jetson.sh"
+            default="false"
+            user="jetson"
+        />
+    </group>
+</launch>

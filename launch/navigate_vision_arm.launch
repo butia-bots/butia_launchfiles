@@ -4,7 +4,7 @@
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="real_sense"/>
 
     <include file="$(find butia_launchfiles)/launch/navigate_vision.launch">
         <arg name="output" value="$(arg output)"/>
@@ -14,7 +14,7 @@
         <arg name="camera" value="$(arg camera)"/>
     </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
 
     <group if="$(arg use_rviz)">
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>

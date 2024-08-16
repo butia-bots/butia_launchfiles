@@ -1,0 +1,10 @@
+<launch>
+    <arg name="ROBOT_MODEL" default="$(env ROBOT_MODEL)"/>
+    
+    <group if="$(eval ROBOT_MODEL == DORIS)">
+        <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
+    </group>
+    <group if="$(eval ROBOT_MODEL == BORIS)">
+                
+    </group>
+</launch>

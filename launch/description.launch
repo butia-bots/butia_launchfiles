@@ -1,0 +1,12 @@
+<launch>
+    <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+    <arg name="arm_z_position" default="0.51"/>
+    <group if="$(eval ROBOT == 'DORIS')">
+        <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
+    </group>
+    <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find butia_launchfiles)/launch/boris_description.launch">
+            <arg name="arm_z_position" value="$(arg arm_z_position)"/>
+        </include>
+    </group>
+</launch>

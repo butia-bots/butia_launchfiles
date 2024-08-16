@@ -1,0 +1,6 @@
+<launch>
+    <arg name="arm_z_position" default="0.51"/>
+    <include file="$(find shark-mb-ros)/launch/shark_v1_description.launch">
+        <!-- <arg name="arm_z_position" value="$(arg arm_z_position)"/> -->
+    </include>
+</launch>
