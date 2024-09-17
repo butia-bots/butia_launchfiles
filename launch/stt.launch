@@ -5,8 +5,9 @@
     <rosparam param="whitelist">$(arg ROBOT)</rosparam>
 
     <group if="$(eval ROBOT == 'DORIS')">
-        <include file="$(find butia_speech)/launch/speech_to_text.launch"/>
+        <include file="$(find butia_speech)/launch/speech_to_text.launch">
             <arg name="challenge_config" value="$(arg challenge_config)"/>
+        </include>
     </group>
         
     <group if="$(eval ROBOT == 'BORIS')">
