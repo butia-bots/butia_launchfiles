@@ -12,6 +12,7 @@
     <include file="$(find butia_launchfiles)/launch/description.launch"/>
 
     <include file="$(find butia_launchfiles)/launch/navigate.launch">
+        <arg name="use_rviz" value="false"/>
         <arg name="observation_sources" value="$(arg observation_sources)"/>
     </include>
 

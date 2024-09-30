@@ -4,7 +4,7 @@
     <arg name="output" default="screen"/>
     <arg name="observation_sources" default="body_scan ground_scan back_scan"/>
     <arg name="unknown_map" default="false"/>
-    <arg name="map" default="$(find shark-mb-ros)/maps/arena_holanda.yaml"/>
+    <arg name="map" default="$(find shark-mb-ros)/maps/sala_fbot_2024_1.yaml"/>
     <arg name="use_rviz" default="true"/>
 
     <group if="$(eval ROBOT == 'DORIS')">
