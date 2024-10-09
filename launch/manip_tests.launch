@@ -8,8 +8,11 @@
     <arg name="camera" default="realsense"/>
     <arg name="tracking_config_file" default="yolo_tracker_face_recognition.yaml"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
+    <arg name="arm_z_position" value="0.34"/>
 
-    <include file="$(find butia_launchfiles)/launch/description.launch"/>
+    <include file="$(find butia_launchfiles)/launch/doris_description.launch">
+        <arg name="arm_z_position" value="$(arg arm_z_position)"/>
+    </include>
 
     <include file="$(find butia_launchfiles)/launch/navigate.launch">
         <arg name="use_rviz" value="false"/>

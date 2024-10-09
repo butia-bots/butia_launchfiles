@@ -3,7 +3,7 @@
     <arg name="navigate_output" default="$(arg output)"/>
     <arg name="vision_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
-    <arg name="camera" default="kinect"/>
+    <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="$(arg observation_sources)"/>
 
     <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
