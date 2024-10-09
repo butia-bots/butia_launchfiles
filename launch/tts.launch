@@ -3,10 +3,10 @@
     <rosparam param="whitelist">$(arg ROBOT)</rosparam>
 
     <group if="$(eval ROBOT == 'DORIS')">
-        <include file="$(find butia_speech)/launch/synthesizer_speech.launch"/>
+        <include file="$(find butia_speech)/launch/synthesizer_speech_old.launch"/>
     </group>
         
     <group if="$(eval ROBOT == 'BORIS')">
-        <include file="$(find butia_speech)/launch/synthesizer_speech_old.launch"/>
+        <include file="$(find butia_speech)/launch/synthesizer_speech.launch"/>
     </group>
 </launch>
