@@ -1,6 +1,5 @@
 <launch>
     <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
-    <arg name="machine" default="jetson"/>
     <rosparam param="whitelist">$(arg ROBOT)</rosparam>
 
     <group if="$(eval ROBOT == 'DORIS')">
@@ -8,9 +7,6 @@
     </group>
         
     <group if="$(eval ROBOT == 'BORIS')">
-        <include file="$(find butia_launchfiles)/launch/machines.launch"/>
-        <include file="$(find butia_speech)/launch/synthesizer_speech_ml.launch">
-            <arg name="speech_synthesizer_machine" value="$(arg machine)"/>
-        </include>
+        <include file="$(find butia_speech)/launch/synthesizer_speech_old.launch"/>
     </group>
 </launch>
