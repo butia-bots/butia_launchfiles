@@ -11,7 +11,7 @@
     <arg name="frame" default="map"/>
     <arg name="arm_z_position" value="0.34"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_description.launch">
+    <include file="$(find butia_launchfiles)/launch/description.launch">
         <arg name="arm_z_position" value="$(arg arm_z_position)"/>
     </include>
 

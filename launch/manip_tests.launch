@@ -11,7 +11,7 @@
     <arg name="config_file" default="yolov8_object_recognition_custom.yaml"/>
     <arg name="arm_z_position" value="0.34"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_description.launch">
+    <include file="$(find butia_launchfiles)/launch/boris_description.launch">
         <arg name="arm_z_position" value="$(arg arm_z_position)"/>
     </include>
 
