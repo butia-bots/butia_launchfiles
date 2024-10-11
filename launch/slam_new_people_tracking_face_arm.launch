@@ -10,7 +10,7 @@
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="true"/>
     <arg name="frame" default="odom"/>
-    <arg name="arm_z_position" default="0.34"/>
+    <arg name="arm_z_position" default="$(arg arm_z_position)"/>
 
     <include file="$(find butia_launchfiles)/launch/description.launch">
         <arg name="arm_z_position" value="$(arg arm_z_position)"/>
