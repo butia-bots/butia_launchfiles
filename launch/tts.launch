@@ -9,7 +9,7 @@
         
     <group if="$(eval ROBOT == 'BORIS')">
         <include file="$(find butia_launchfiles)/launch/machines.launch"/>
-        <include file="$(find butia_speech)/launch/synthesizer_speech_ml.launch">
+        <include file="$(find butia_speech)/launch/synthesizer_speech.launch">
             <arg name="speech_synthesizer_machine" value="$(arg machine)"/>
             <arg name="audio_player_machine" value="$(arg machine)"/>
         </include>
