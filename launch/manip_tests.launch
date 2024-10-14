@@ -9,7 +9,7 @@
     <arg name="tracking_config_file" default="yolo_tracker_face_recognition.yaml"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="config_file" default="yolov8_object_recognition_custom.yaml"/>
-    <arg name="arm_z_position" value="0.34"/>
+    <arg name="arm_z_position" default="0.34"/>
 
     <include file="$(find butia_launchfiles)/launch/boris_description.launch">
         <arg name="arm_z_position" value="$(arg arm_z_position)"/>
