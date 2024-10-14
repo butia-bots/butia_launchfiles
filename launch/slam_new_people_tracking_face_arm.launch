@@ -12,6 +12,8 @@
     <arg name="frame" default="odom"/>
     <arg name="arm_z_position" default="$(arg arm_z_position)"/>
 
+    <include file="$(find joy2twist)/launch/gamepad_controller.launch.launch"/>
+
     <include file="$(find butia_launchfiles)/launch/description.launch">
         <arg name="arm_z_position" value="$(arg arm_z_position)"/>
     </include>
@@ -23,10 +25,6 @@
     </include>
 
     <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
-<!-- 
-    <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
-        <arg name="use_moveit_rviz" value="$(arg use_moveit_rviz)"/>
-    </include>     -->
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
