@@ -9,7 +9,7 @@
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="false"/>
     <arg name="frame" default="map"/>
-    <arg name="arm_z_position" value="$(arg arm_z_position)"/>
+    <arg name="arm_z_position" default="0.263"/>
 
     <include file="$(find butia_launchfiles)/launch/description.launch">
         <arg name="arm_z_position" value="$(arg arm_z_position)"/>
@@ -23,10 +23,6 @@
     </include>
 
     <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
-
-    <!-- <include file="$(find interbotix_xsarm_moveit)/launch/xsarm_moveit.launch">
-        <arg name="use_moveit_rviz" value="false"/>
-    </include>     -->
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
