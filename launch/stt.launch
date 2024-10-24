@@ -1,6 +1,6 @@
 <launch>
     <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
-    <arg name="challenge_config"/>
+    <arg name="challenge_config" default="$(find butia_speech)/config/butia_stt_quiz.yaml"/>
     <rosparam param="whitelist">$(arg ROBOT)</rosparam>
 
     <group if="$(eval ROBOT == 'DORIS')">
