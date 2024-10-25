@@ -3,6 +3,11 @@
     <arg name="unknown_map" default="true"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="output" default="screen"/>
+    <arg name="use_joy" default="true"/>
+
+    <group if="$(eval use_joy == true)">
+        <include file="$(find joy2twist)/launch/gamepad_controller.launch"/>  
+    </group>
 
     <group if="$(eval ROBOT == 'DORIS')">
         <include file="$(find butia_navigation_launchfiles)/slam-doris-unknown.launch">
