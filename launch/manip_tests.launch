@@ -8,7 +8,7 @@
     <arg name="camera" default="realsense"/>
     <arg name="tracking_config_file" default="yolo_tracker_face_recognition.yaml"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
-    <arg name="config_file" default="yolov8_object_recognition_custom.yaml"/>
+    <arg name="config_file" default="yolov8_object_recognition_custom.yaml"/>   
     <arg name="arm_z_position" default="0.34"/>
 
     <include file="$(find butia_launchfiles)/launch/boris_description.launch">
@@ -29,10 +29,6 @@
     <include file="$(find butia_launchfiles)/launch/machines.launch"/>
   
     <include file="$(find butia_vision_launchfiles)/object_recognition.launch">
-        <arg name="bvb_machine" value="localhost"/>
-        <arg name="machine" value="jetson"/>
-        <arg name="camera" value="$(arg camera)"/>
-        <arg name="config_file" value="$(arg config_file)"/>
     </include>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>

@@ -1,28 +1,25 @@
 <launch>
     <arg name="output" default="screen"/>
     <arg name="navigate_output" default="$(arg output)"/>
-    <arg name="arm_output" default="$(arg output)"/>
     <arg name="face_output" default="$(arg output)"/>
-    <arg name="use_rviz" default="true"/>
+    <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
-    <arg name="unknown_map" default="false"/>
+    <arg name="arm_z_position" default="$(arg arm_z_position)"/>
 
-    <include file="$(find butia_launchfiles)/launch/doris_description.launch"/>
-
-    <include file="$(find butia_navigation_launchfiles)/navigate-doris-base.launch">
-        <arg name="output" value="$(arg navigate_output)"/>
-        <arg name="observation_sources" value="$(arg observation_sources)"/>
-        <arg name="unknown_map" value="$(arg unknown_map)"/>
+    <include file="$(find butia_launchfiles)/launch/description.launch">
+        <arg name="arm_z_position" value="$(arg arm_z_position)"/>
     </include>
 
-    <include file="$(find interbotix_xsarm_moveit)/launch/doris_moveit.launch"/>
+    <include file="$(find butia_launchfiles)/launch/navigate.launch">
+        <arg name="output" value="$(arg navigate_output)"/>
+        <arg name="observation_sources" value="$(arg observation_sources)"/>
+        <arg name="use_rviz" value="false"/>
+    </include>
+    <include file="$(find butia_launchfiles)/launch/manipulation.launch"/>
 
     <include file="$(find robotFace)/launch/face.launch">
         <arg name="output" value="$(arg face_output)"/>
     </include>
-
-    <group if="$(arg use_rviz)">
-        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find butia_launchfiles)/rviz/navigate_vision_arm.rviz" output="$(arg output)"/>
-    </group>
-
+    
+    <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find butia_launchfiles)/rviz/carry_my_luggage.rviz" output="$(arg output)"/>
 </launch>

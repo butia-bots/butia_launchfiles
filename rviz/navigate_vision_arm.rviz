@@ -4,6 +4,8 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /TF1
+        - /TF1/Frames1
         - /PointCloud21
         - /MarkerArray3
         - /PointCloud22
@@ -77,68 +79,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/ee_arm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        boris_arm/ee_gripper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        boris_arm/fingers_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        boris_arm/forearm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/gripper_bar_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/gripper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/gripper_prop_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/left_finger_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/right_finger_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/shoulder_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/upper_arm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        boris_arm/wrist_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -279,6 +219,68 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        wx200/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/ee_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wx200/ee_gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wx200/fingers_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wx200/forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/gripper_bar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/gripper_prop_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/left_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/right_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wx200/wrist_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -286,12 +288,120 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        arm_support_link:
+          Value: false
+        base_footprint:
+          Value: false
+        base_link:
+          Value: false
+        camera_aligned_depth_to_color_frame:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_link:
+          Value: false
+        camera_link_static:
+          Value: false
+        dorso_link:
+          Value: false
+        head_link:
+          Value: false
+        head_pan_link:
+          Value: false
+        head_pan_link_static:
+          Value: false
+        head_root:
+          Value: false
+        head_tilt_link:
+          Value: false
+        head_tilt_link_static:
+          Value: false
+        hokuyo_back_link:
+          Value: false
+        hokuyo_ground_link:
+          Value: false
+        imu_link:
+          Value: false
+        jaw_link:
+          Value: false
+        left_eye_horizontal_link:
+          Value: false
+        left_eye_vertical_link:
+          Value: false
+        left_inferior_eyelid_link:
+          Value: false
+        left_rotacional_eyebrow_link:
+          Value: false
+        left_superior_eyelid_link:
+          Value: false
+        left_vertical_eyebrow_link:
+          Value: false
+        left_wheel:
+          Value: false
+        map:
+          Value: false
+        neck_link:
+          Value: false
+        object2pickup:
+          Value: true
+        odom:
+          Value: false
+        release_pose:
+          Value: true
+        right_eye_horizontal_link:
+          Value: false
+        right_eye_vertical_link:
+          Value: false
+        right_inferior_eyelid_link:
+          Value: false
+        right_rotacional_eyebrow_link:
+          Value: false
+        right_superior_eyelid_link:
+          Value: false
+        right_vertical_eyebrow_link:
+          Value: false
+        right_wheel:
+          Value: false
+        sick_link:
+          Value: false
+        wx200/base_link:
+          Value: false
+        wx200/ee_arm_link:
+          Value: false
+        wx200/ee_gripper_link:
+          Value: false
+        wx200/fingers_link:
+          Value: false
+        wx200/forearm_link:
+          Value: false
+        wx200/gripper_bar_link:
+          Value: false
+        wx200/gripper_link:
+          Value: false
+        wx200/gripper_prop_link:
+          Value: false
+        wx200/left_finger_link:
+          Value: false
+        wx200/right_finger_link:
+          Value: false
+        wx200/shoulder_link:
+          Value: false
+        wx200/upper_arm_link:
+          Value: false
+        wx200/wrist_link:
+          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -299,9 +409,87 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        map:
+          object2pickup:
+            {}
+          odom:
+            base_footprint:
+              base_link:
+                dorso_link:
+                  arm_support_link:
+                    wx200/base_link:
+                      release_pose:
+                        {}
+                      wx200/shoulder_link:
+                        wx200/upper_arm_link:
+                          wx200/forearm_link:
+                            wx200/wrist_link:
+                              wx200/gripper_link:
+                                wx200/ee_arm_link:
+                                  wx200/gripper_bar_link:
+                                    wx200/fingers_link:
+                                      wx200/ee_gripper_link:
+                                        {}
+                                      wx200/left_finger_link:
+                                        {}
+                                      wx200/right_finger_link:
+                                        {}
+                                  wx200/gripper_prop_link:
+                                    {}
+                  head_pan_link:
+                    head_tilt_link:
+                      camera_link:
+                        camera_aligned_depth_to_color_frame:
+                          camera_color_optical_frame:
+                            {}
+                        camera_color_frame:
+                          {}
+                        camera_depth_frame:
+                          camera_depth_optical_frame:
+                            {}
+                  head_pan_link_static:
+                    head_tilt_link_static:
+                      camera_link_static:
+                        {}
+                  head_root:
+                    neck_link:
+                      head_link:
+                        jaw_link:
+                          {}
+                        left_eye_horizontal_link:
+                          left_eye_vertical_link:
+                            {}
+                        left_inferior_eyelid_link:
+                          {}
+                        left_superior_eyelid_link:
+                          {}
+                        left_vertical_eyebrow_link:
+                          left_rotacional_eyebrow_link:
+                            {}
+                        right_eye_horizontal_link:
+                          right_eye_vertical_link:
+                            {}
+                        right_inferior_eyelid_link:
+                          {}
+                        right_superior_eyelid_link:
+                          {}
+                        right_vertical_eyebrow_link:
+                          right_rotacional_eyebrow_link:
+                            {}
+                hokuyo_back_link:
+                  {}
+                hokuyo_ground_link:
+                  {}
+                imu_link:
+                  {}
+                left_wheel:
+                  {}
+                right_wheel:
+                  {}
+                sick_link:
+                  {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Alpha: 0.699999988079071
       Class: rviz/Map
       Color Scheme: map
@@ -499,9 +687,7 @@ Visualization Manager:
       Marker Topic: /pub/markers
       Name: MarkerArray
       Namespaces:
-        "": true
-        bboxes: true
-        texts: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/Marker
@@ -589,7 +775,8 @@ Visualization Manager:
       Marker Topic: /butia_vision/br/object_recognition_markers
       Name: MarkerArray
       Namespaces:
-        {}
+        bboxes: true
+        texts: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -620,7 +807,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.5294711589813232
+      Distance: 3.6262166500091553
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -628,17 +815,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 1.534037470817566
+        Y: -0.019129961729049683
+        Z: 1.0264594554901123
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9303983449935913
+      Pitch: 0.41051721572875977
       Target Frame: base_footprint
-      Yaw: 0.8753981590270996
+      Yaw: 4.140089511871338
     Saved:
       - Class: rviz/Orbit
         Distance: 8.172611236572266
