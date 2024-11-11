@@ -5,7 +5,7 @@
     <arg name="face_output" default="$(arg output)"/>
     <arg name="arm_output" default="$(arg output)"/>
     <arg name="use_rviz" default="true"/>
-    <arg name="map" default="$(find shark-mb-ros)/maps/goiania.yaml"/>
+    <arg name="map" default="$(find shark-mb-ros)/maps/goiania_gimp.yaml"/>
     <arg name="camera" default="realsense"/>
     <arg name="observation_sources" default="body_scan ground_scan"/>
     <arg name="unknown_map" default="false"/>
