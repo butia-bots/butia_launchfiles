@@ -303,7 +303,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -318,7 +318,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Alpha: 0.699999988079071
       Class: rviz/Map
       Color Scheme: map
@@ -466,7 +466,9 @@ Visualization Manager:
       Marker Topic: /pub/markers
       Name: MarkerArray
       Namespaces:
-        {}
+        "": true
+        bboxes: true
+        texts: true
       Queue Size: 100
       Value: true
     - Class: rviz/Marker
@@ -499,7 +501,7 @@ Visualization Manager:
       Marker Topic: /align_marker
       Name: Marker
       Namespaces:
-        area: true
+        {}
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -582,7 +584,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.462430477142334
+      Distance: 13.511273384094238
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -598,9 +600,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.444797158241272
+      Pitch: 1.0147969722747803
       Target Frame: <Fixed Frame>
-      Yaw: 5.823599338531494
+      Yaw: 5.62860107421875
     Saved: ~
 Window Geometry:
   Displays:

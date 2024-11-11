@@ -219,6 +219,16 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        webcam_lens_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        webcam_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         wx200/base_link:
           Alpha: 1
           Show Axes: false
@@ -354,12 +364,8 @@ Visualization Manager:
           Value: false
         neck_link:
           Value: false
-        object2pickup:
-          Value: true
         odom:
           Value: false
-        release_pose:
-          Value: true
         right_eye_horizontal_link:
           Value: false
         right_eye_vertical_link:
@@ -375,6 +381,10 @@ Visualization Manager:
         right_wheel:
           Value: false
         sick_link:
+          Value: false
+        webcam_lens_link:
+          Value: false
+        webcam_link:
           Value: false
         wx200/base_link:
           Value: false
@@ -410,16 +420,12 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
-          object2pickup:
-            {}
           odom:
             base_footprint:
               base_link:
                 dorso_link:
                   arm_support_link:
                     wx200/base_link:
-                      release_pose:
-                        {}
                       wx200/shoulder_link:
                         wx200/upper_arm_link:
                           wx200/forearm_link:
@@ -427,6 +433,9 @@ Visualization Manager:
                               wx200/gripper_link:
                                 wx200/ee_arm_link:
                                   wx200/gripper_bar_link:
+                                    webcam_link:
+                                      webcam_lens_link:
+                                        {}
                                     wx200/fingers_link:
                                       wx200/ee_gripper_link:
                                         {}
@@ -807,7 +816,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.6262166500091553
+      Distance: 3.596088171005249
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -823,9 +832,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.41051721572875977
+      Pitch: 0.42979663610458374
       Target Frame: base_footprint
-      Yaw: 4.140089511871338
+      Yaw: 4.0150909423828125
     Saved:
       - Class: rviz/Orbit
         Distance: 8.172611236572266
