@@ -1,5 +1,6 @@
 <launch>
     <arg name="ROBOT" default="$(env ROBOT_MODEL)"/>
+    <arg name="machine" default="jetson"/>
     <arg name="challenge_config" default="$(find butia_speech)/config/butia_stt_quiz.yaml"/>
     <rosparam param="whitelist">$(arg ROBOT)</rosparam>
 
@@ -8,7 +9,9 @@
     </group>
         
     <group if="$(eval ROBOT == 'BORIS')">
+        <include file="$(find butia_launchfiles)/launch/machines.launch"/>
         <include file="$(find butia_speech)/launch/speech_to_text.launch">
+            <arg name="speech_recog_machine" value="$(arg machine)"/>
             <arg name="challenge_config" value="$(arg challenge_config)"/>
         </include>
     </group>
